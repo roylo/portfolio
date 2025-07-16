@@ -1,1 +1,18 @@
 media: public
+content:
+  - name: posts
+    label: Posts
+    type: collection
+    path: 'content/posts'
+    view:
+      fields: [ title, publishedAt ]
+    fields:
+      - name: publishedAt
+        label: Date
+        type: date
+      - name: title
+        label: Title
+        type: string
+      - name: body
+        label: Body
+        type: rich-text
