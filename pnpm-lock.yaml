@@ -20,6 +20,9 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      google:
+        specifier: link:next/font/google
+        version: link:next/font/google
       gray-matter:
         specifier: ^4.0.3
         version: 4.0.3
