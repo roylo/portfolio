@@ -1,14 +1,11 @@
 ---
-__Advertisement :)__
-
-- __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image
-  resize in browser.
-- __[babelfish](https://github.com/nodeca/babelfish/)__ - developer friendly
-  i18n with plurals support and easy syntax.
-
-You will like those projects!
-
+  title: Introduction to NextJs
+  summary: NextJs is a powerful React framework that makes it easy to build server-rendered React applications. This post will introduce you to the basics of NextJs.
+  image: /images/posts/introduction-to-nextjs.webp
+  author: 'Hamed Bahram'
+  publishedAt: '2024-08-10'
 ---
+
 
 # h1 Heading 8-)
 ## h2 Heading
