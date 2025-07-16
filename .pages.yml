@@ -1,7 +1,7 @@
 media: public
 content:
   - name: posts
-    label: Posts
+    label: My Posts
     type: collection
     path: 'content/posts'
     view:
