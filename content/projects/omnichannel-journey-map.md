@@ -4,6 +4,7 @@
   image: /images/projects/journey-map.webp
   skill: ['genAI', 'Product roadmap', 'MVP definition', 'Cross-functional collaboration', 'Feature prioritization', 'Client engagement', 'Design collaboration']
   duration: ['2023', '2024']
+  author: Produce Lead
   publishedAt: '2024-08-10'
 ---
 

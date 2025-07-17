@@ -37,7 +37,7 @@ const Projects = ({ projects }: { projects: ProjectMetadata[] }) => {
               </div>
             )}
             <div className="flex flex-col justify-center px-6 py-4 flex-1 transition-colors duration-300">
-              {/* Title, duration, and type row */}
+              {/* Title and duration row (type removed) */}
               <div className="flex flex-row items-center justify-between mb-1">
                 <h2 className="title text-xl font-semibold line-clamp-1 group-hover:text-primary transition-colors duration-300">
                   {project.title}
@@ -48,20 +48,7 @@ const Projects = ({ projects }: { projects: ProjectMetadata[] }) => {
                     {project.duration[0]}
                     {project.duration[1] && ` ~ ${project.duration[1]}`}
                   </span>
-                  {/* New: Project type (Company or Hobby) */}
-                  {project.type && (
-                    <span
-                      className={`
-                        ml-2 px-2 py-0.5 rounded text-xs font-semibold
-                        ${project.type === 'Company'
-                          ? 'bg-yellow-100 text-yellow-800 border border-yellow-200 dark:bg-yellow-900 dark:text-yellow-200 dark:border-yellow-700'
-                          : 'bg-purple-100 text-purple-800 border border-purple-200 dark:bg-purple-900 dark:text-purple-200 dark:border-purple-700'
-                        }
-                      `}
-                    >
-                      {project.type}
-                    </span>
-                  )}
+                  {/* Project type display removed */}
                 </div>
               </div>
               <p className="text-sm text-muted-foreground mb-2 mt-3 line-clamp-4">

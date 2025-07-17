@@ -2,7 +2,7 @@
   title: Fitribe
   summary: A social iOS app that helps people lose weight through community support. Reached 1,500 daily active users and was featured as a “Creative App” on the iOS App Store.
   image: /images/projects/fitribe.webp
-  author: 'Roy Lo'
+  author: Co-Founder & CEO
   techStack: ['Swift', 'Parse', 'Sinch', 'AWS']
   duration: ['2015', '2016']
   publishedAt: '2016-08-01'
