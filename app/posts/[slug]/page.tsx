@@ -1,4 +1,4 @@
-import { getPostBySlug, getPosts } from "@/lib/posts"
+import { getContentBySlug, getContent } from "@/lib/content"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import { ArrowLeftIcon } from "lucide-react"
@@ -7,16 +7,15 @@ import { formatDate } from "@/lib/utils"
 import MDXContent from "@/components/mdx-content"
 
 export async function generateStaticParams() {
-  const posts = await getPosts()
+  const posts = await getContent(undefined, 'posts')
   const slugs = posts.map(post => ({ slug: post.slug }))
 
   return slugs
 }
 
 export default async function Post({ params }: { params: { slug: string } }) {
-  const { slug } = params
-  console.log(slug)
-  const post = await getPostBySlug(slug)
+  const { slug } = await params
+  const post = await getContentBySlug(slug, 'posts')
 
   if (!post) {
     return notFound()

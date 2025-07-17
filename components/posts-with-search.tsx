@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { PostMetadata } from '@/lib/posts'
+import { PostMetadata } from '@/lib/content'
 
 import Posts from '@/components/posts'
 import { Input } from '@/components/ui/input'

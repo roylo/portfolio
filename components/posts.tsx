@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { PostMetadata } from '@/lib/posts'
+import { PostMetadata } from '@/lib/content'
 import { formatDate } from '@/lib/utils'
 
 export default function Posts({ posts }: { posts: PostMetadata[] }) {
@@ -18,7 +18,6 @@ export default function Posts({ posts }: { posts: PostMetadata[] }) {
                 {post.summary}
               </p>
             </div>
-
             {post.publishedAt && (
               <p className='mt-1 text-sm font-light'>
                 {formatDate(post.publishedAt)}
