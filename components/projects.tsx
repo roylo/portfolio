@@ -2,7 +2,6 @@ import React from 'react'
 import { ProjectMetadata } from '@/lib/content'
 import Link from 'next/link'
 import Image from 'next/image'
-import { formatDate } from '@/lib/utils'
 
 const Projects = ({ projects }: { projects: ProjectMetadata[] }) => {
   return (
@@ -37,7 +36,7 @@ const Projects = ({ projects }: { projects: ProjectMetadata[] }) => {
               </div>
             )}
             <div className="flex flex-col justify-center px-6 py-4 flex-1 transition-colors duration-300">
-              {/* Title and duration row (type removed) */}
+              {/* Title, duration, and type row */}
               <div className="flex flex-row items-center justify-between mb-1">
                 <h2 className="title text-xl font-semibold line-clamp-1 group-hover:text-primary transition-colors duration-300">
                   {project.title}
@@ -48,7 +47,6 @@ const Projects = ({ projects }: { projects: ProjectMetadata[] }) => {
                     {project.duration[0]}
                     {project.duration[1] && ` ~ ${project.duration[1]}`}
                   </span>
-                  {/* Project type display removed */}
                 </div>
               </div>
               <p className="text-sm text-muted-foreground mb-2 mt-3 line-clamp-4">

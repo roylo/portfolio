@@ -1,5 +1,5 @@
 import Projects from '@/components/projects'
-import { getContent } from '@/lib/content'
+import { getContent, ProjectMetadata } from '@/lib/content'
 
 export default async function ProjectsPage() {
   const projects = await getContent(undefined, 'projects')
@@ -9,7 +9,7 @@ export default async function ProjectsPage() {
       <div className='container max-w-3xl'>
         <h1 className='title mb-12'>Projects</h1>
 
-        <Projects projects={projects} />
+        <Projects projects={projects as ProjectMetadata[]} />
       </div>
     </section>
   )

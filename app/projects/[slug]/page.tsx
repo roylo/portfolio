@@ -23,7 +23,7 @@ export default async function Project({ params }: { params: { slug: string } }) 
 
   const { metadata, content } = project
   // Cast metadata to ProjectMetadata for type safety
-  const { title, summary, image, author, publishedAt, techStack, skill, type, duration } = metadata as ProjectMetadata
+  const { title, summary, image, author, publishedAt, techStack, skill, duration } = metadata as ProjectMetadata
 
   return (
     <section className='pb-24 pt-32'>
@@ -63,24 +63,6 @@ export default async function Project({ params }: { params: { slug: string } }) 
 
         {/* Project meta labels */}
         <div className="flex flex-col gap-2 mt-6">
-          <div className="flex flex-row items-center gap-4 flex-wrap">
-            {/* Duration */}
-            {/* Already shown in header, so can be omitted here or left for redundancy */}
-            {/* Type */}
-            {type && (
-              <span
-                className={`
-                  px-2 py-0.5 rounded text-xs font-semibold
-                  ${type === 'Company'
-                    ? 'bg-yellow-100 text-yellow-800 border border-yellow-200 dark:bg-yellow-900 dark:text-yellow-200 dark:border-yellow-700'
-                    : 'bg-purple-100 text-purple-800 border border-purple-200 dark:bg-purple-900 dark:text-purple-200 dark:border-purple-700'
-                  }
-                `}
-              >
-                {type}
-              </span>
-            )}
-          </div>
           {/* Tech stack labels */}
           {Array.isArray(techStack) && techStack.length > 0 && (
             <div className="flex flex-wrap gap-2 mt-2">

@@ -1,7 +1,7 @@
 import React from 'react'
 import Projects from '@/components/projects'
 import Link from 'next/link'
-import { getContent } from '@/lib/content'
+import { getContent, ProjectMetadata } from '@/lib/content'
 
 const RecentProjects = async () => {
   const projects = await getContent(2, 'projects')
@@ -9,7 +9,7 @@ const RecentProjects = async () => {
     <section className='pb-24'>
       <div>
         <h2 className='title mb-12'>Recent projects</h2>
-        <Projects projects={projects} />
+        <Projects projects={projects as ProjectMetadata[]} />
 
         <Link
           href='/projects'

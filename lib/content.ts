@@ -48,7 +48,7 @@ export async function getContentBySlug(slug: string, directory: string = 'posts'
   }
 }
 
-export async function getContent(limit?: number, directory: string = 'posts'): Promise<PostMetadata[]> {
+export async function getContent(limit?: number, directory: string = 'posts'): Promise<PostMetadata[] | ProjectMetadata[]> {
   const files = fs.readdirSync(path.join(rootDirectory, directory))
 
   const content = files
@@ -68,7 +68,7 @@ export async function getContent(limit?: number, directory: string = 'posts'): P
   return content
 }
 
-export function getContentMetadata(filepath: string, directory: string = 'posts'): PostMetadata {
+export function getContentMetadata(filepath: string, directory: string = 'posts'): PostMetadata | ProjectMetadata {
   const slug = filepath.replace(/\.md$/, '')
   const filePath = path.join(rootDirectory, directory, filepath)
   const fileContent = fs.readFileSync(filePath, { encoding: 'utf8' })
