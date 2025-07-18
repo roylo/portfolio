@@ -1,10 +1,9 @@
 'use client'
 
 import { FragmentMetadata } from '@/lib/content'
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 function LocationIcon({ className = "inline-block w-4 h-4 mr-1 -mt-0.5" }) {
-  // A more "drop-like" location pin icon
   return (
     <svg
       className={className}
@@ -34,6 +33,7 @@ function LocationIcon({ className = "inline-block w-4 h-4 mr-1 -mt-0.5" }) {
   )
 }
 
+
 export default function Fragments({ fragments }: { fragments: FragmentMetadata[] }) {
   const [selectedFragment, setSelectedFragment] = useState<FragmentMetadata | null>(null)
 
@@ -44,58 +44,40 @@ export default function Fragments({ fragments }: { fragments: FragmentMetadata[]
   const closeModal = () => {
     setSelectedFragment(null)
   }
-
   return (
     <>
-      <section className="pb-24 pt-30">
+      {fragments.map((el) => (
         <div
-          className="
-            container
-            mx-auto
-            max-w-6xl
-            space-y-2
-            columns-1
-            sm:columns-2
-            md:columns-3
-            lg:columns-4
-            gap-4
-          "
+          key={el.slug}
+          className="relative group rounded-md overflow-hidden mb-4 break-inside-avoid border border-gray-200 cursor-pointer"
+          onClick={() => openModal(el)}
         >
-          {fragments.map((el) => (
-            <div
-              key={el.slug}
-              className="relative group rounded-md overflow-hidden mb-4 break-inside-avoid border border-gray-200 cursor-pointer"
-              onClick={() => openModal(el)}
-            >
-              <img
-                src={el.image}
-                alt={el.title}
-                className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-0 left-0 w-full flex flex-col items-start">
-                  <span
-                    className={
-                      "text-white text-lg font-semibold w-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" +
-                      (el.location ? " px-4 pt-4 pb-1" : " p-4")
-                    }
-                  >
-                    {el.title}
-                  </span>
-                  {el.location && (
-                    <span className="text-white text-sm font-normal px-4 pb-4 pt-0 w-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center">
-                      <LocationIcon />
-                      {el.location}
-                    </span>
-                  )}
-                </div>
-              </div>
+          <img
+            src={el.image}
+            alt={el.title}
+            className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute bottom-0 left-0 w-full flex flex-col items-start">
+              <span
+                className={
+                  "text-white text-base font-semibold w-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" +
+                  (el.location ? " px-4 pt-4 pb-1" : " p-4")
+                }
+              >
+                {el.title}
+              </span>
+              {el.location && (
+                <span className="text-white text-xs font-normal px-4 pb-4 pt-0 w-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center">
+                  <LocationIcon />
+                  {el.location}
+                </span>
+              )}
             </div>
-          ))}
+          </div>
         </div>
-      </section>
-
+      ))}
       {/* Modal */}
       {selectedFragment && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80" onClick={closeModal}>
@@ -119,4 +101,4 @@ export default function Fragments({ fragments }: { fragments: FragmentMetadata[]
       )}
     </>
   )
-} 
+}
