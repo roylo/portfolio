@@ -34,6 +34,9 @@ export default function Header() {
             <Link href='/projects'>Projects</Link>
           </li>
           <li className='transition-colors hover:text-blue-500 hover:underline'>
+            <Link href='/fragments'>Fragments</Link>
+          </li>
+          <li className='transition-colors hover:text-blue-500 hover:underline'>
             <Link href='/contact'>Contact</Link>
           </li>
         </ul>
