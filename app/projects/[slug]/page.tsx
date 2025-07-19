@@ -3,7 +3,6 @@ import { notFound } from "next/navigation"
 import Link from "next/link"
 import { ArrowLeftIcon } from "lucide-react"
 import Image from "next/image"
-import { formatDate } from "@/lib/utils"
 import MDXContent from "@/components/mdx-content"
 
 export async function generateStaticParams() {
@@ -13,7 +12,7 @@ export async function generateStaticParams() {
   return slugs
 }
 
-export default async function Project({ params }: { params: { slug: string } }) {
+export default async function Project({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const project = await getContentBySlug(slug, 'projects')
 
@@ -23,7 +22,7 @@ export default async function Project({ params }: { params: { slug: string } }) 
 
   const { metadata, content } = project
   // Cast metadata to ProjectMetadata for type safety
-  const { title, summary, image, author, publishedAt, techStack, skill, duration } = metadata as ProjectMetadata
+  const { title, image, author, techStack, skill, duration } = metadata as ProjectMetadata
 
   return (
     <section className='pb-24 pt-32'>

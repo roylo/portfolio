@@ -23,7 +23,7 @@ export default function PrivacyPage() {
         <section className='mb-8'>
           <h2 className='text-2xl font-semibold mb-4'>Introduction</h2>
           <p>
-            This Privacy Policy describes how Roy Lo ("I", "me", or "my") collects, uses, and protects your information when you visit my portfolio website at roylo.fun (the "Service").
+            This Privacy Policy describes how Roy Lo (&ldquo;I&rdquo;, &ldquo;me&rdquo;, or &ldquo;my&rdquo;) collects, uses, and protects your information when you visit my portfolio website at roylo.fun (the &ldquo;Service&rdquo;).
           </p>
           <p>
             By using the Service, you agree to the collection and use of information in accordance with this policy.
@@ -131,7 +131,7 @@ export default function PrivacyPage() {
         </section>
 
         <section className='mb-8'>
-          <h2 className='text-2xl font-semibold mb-4'>Children's Privacy</h2>
+          <h2 className='text-2xl font-semibold mb-4'>Children&apos;s Privacy</h2>
           <p>
             This website is not intended for children under 13 years of age. I do not knowingly collect personal information from children under 13.
           </p>
@@ -140,7 +140,7 @@ export default function PrivacyPage() {
         <section className='mb-8'>
           <h2 className='text-2xl font-semibold mb-4'>Changes to This Privacy Policy</h2>
           <p>
-            I may update this Privacy Policy from time to time. I will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
+            I may update this Privacy Policy from time to time. I will notify you of any changes by posting the new Privacy Policy on this page and updating the &ldquo;Last updated&rdquo; date.
           </p>
         </section>
 
