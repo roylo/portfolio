@@ -1,5 +1,7 @@
 ---
-title: "When ChatGPT Fails: What a Service Outage Taught Me About Learning with AI"
+title: "When ChatGPT FAILS: What a service outage taught me about learning with AI"
+summary: Last autumn, during final exam week at the GSB, ChatGPT experienced a
+  service outage. My classmates and I panicked.
 author: Roy Lo
 publishedAt: 2025-03-14
 ---
@@ -52,7 +54,6 @@ My goal is to [understand this concept/develop this skill/be able to solve simil
 
 ONLY AFTER I'VE ATTEMPTED TO SOLVE WITH YOUR GUIDANCE:
 I'll follow up with my solution attempt, and then you can provide feedback and the complete answer if needed.
-
 ```
 
 I've taken over 20 classes in the past three quarters at the GSB. Clearly, best practices for adopting AI in our learning remain debatable. Some professors encourage or even advocate for AI use in our learning. Others add complexity to their exams to prevent AI from easily solving problems, while some still oppose students using AI for assignments and exams. I believe the responsibility for learning ultimately rests with students. AI gives us more opportunities and flexibility to make learning meaningful—let's not shortcut the fun and joy in the process.
