@@ -13,31 +13,31 @@ Then, the game began.
 
 The first card read:
 
-> “You have a very successful career but live alone without many friends and family.”
+> You have a very successful career but live alone without many friends and family.
 
 Obviously, this wasn’t the dream life everyone wanted, so only a few of us placed bids.
 
-> “$50,000!”
+> $50,000!
 > 
-> “$150,000!”
+> $150,000!
 
 As the game went on, we realized there were no perfect life cards. Every story had something good but also a noticeable flaw. Then, this card was revealed:
 
-> “You once had a passionate and intense love story, but in the end, you didn’t make it together.”
+> You once had a passionate and intense love story, but in the end, you didn’t make it together.
 
 It caught many students’ attention.
 
-> “$300,000!... $400,000!.....$500,000!!”
+> $300,000!... $400,000!.....$500,000!!
 > 
-> “Hey! Here! I bid $700,000!”
+> Hey! Here! I bid $700,000!
 > 
-> “One million!”
+> **One million!**
 
 A friend of mine shouted it out boldly. We all laughed—not just because he was willing to pay everything for love, but because of his courage to claim it out loud. That was the first time someone bid all their money for a single life story. And soon after, we realized that with so few cards left, we can actually only win a story by bidding a full million dollars. Many of us still had nothing in hand, and the tension in the room grew.
 
 Then, the next card was revealed:
 
-> “The life of an ordinary person—you’ve never done anything grand, but you’ve lived in peace.”
+> The life of an ordinary person—you’ve never done anything grand, but you’ve lived in peace.
 
 The competition, the pressure, the fear of leaving empty-handed—it all pushed me to act fast. Seeing that this life story had no obvious downside, I quickly called out my million-dollar bid.
 
