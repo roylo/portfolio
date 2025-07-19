@@ -4,7 +4,7 @@ summary: A social iOS app that helps people lose weight through community
   support. Reached 1,500 daily active users and was featured as a “Creative App”
   on the iOS App Store.
 author: Co-Founder & CEO
-image: /public/images/projects/fitribe.webp
+image: /images/projects/fitribe.webp
 publishedAt: 2016-08-01
 duration:
   - "2015"
