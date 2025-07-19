@@ -9,12 +9,22 @@ content:
     view:
       fields: [ title, publishedAt ]
     fields:
-      - name: publishedAt
-        label: Date
-        type: date
       - name: title
         label: Title
         type: string
+      - name: summary
+        label: Summary
+        type: text
+      - name: image
+        label: Image
+        type: image
+      - name: author
+        label: Author
+        type: string
+        default: Roy Lo
+      - name: publishedAt
+        label: Date
+        type: date
       - name: body
         label: Body
         type: rich-text
@@ -59,4 +69,26 @@ content:
       - name: body
         label: Body
         type: rich-text
-    
+  - name: fragments
+    label: Fragments
+    type: collection
+    path: 'content/fragments'
+    view:
+      fields: [ title, publishedAt, image ]
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: location
+        label: Location
+        type: string
+      - name: image
+        label: Image
+        type: image
+      - name: author
+        label: Author
+        type: string
+        default: Roy Lo
+      - name: publishedAt
+        label: Date
+        type: date
