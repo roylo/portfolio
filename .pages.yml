@@ -8,7 +8,7 @@ content:
     path: 'content/posts'
     view:
       fields: [ title, publishedAt ]
-      sort: [ publishedAt ]
+      default: { sort: publishedAt, order: desc }
     fields:
       - name: title
         label: Title
@@ -35,7 +35,6 @@ content:
     path: 'content/projects'
     view:
       fields: [ image, title, publishedAt ]
-      sort: [ publishedAt ]
       default: { sort: publishedAt, order: desc }
     fields:
       - name: title
@@ -78,7 +77,7 @@ content:
     path: 'content/fragments'
     view:
       fields: [ image, title, publishedAt ]
-      sort: [ publishedAt ]
+      default: { sort: publishedAt, order: desc }
     fields:
       - name: title
         label: Title
