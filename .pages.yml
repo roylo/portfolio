@@ -74,7 +74,7 @@ content:
     type: collection
     path: 'content/fragments'
     view:
-      fields: [ title, location, image ]
+      fields: [ title, publishedAt, image ]
     fields:
       - name: title
         label: Title
