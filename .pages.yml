@@ -23,17 +23,35 @@ content:
     view:
       fields: [ title, publishedAt ]
     fields:
-      - name: summary
-        label: Summary
-        type: text
-      - name: publishedAt
-        label: Date
-        type: date
       - name: title
         label: Title
         type: string
+        required: true
+      - name: summary
+        label: Summary
+        type: text
+      - name: author
+        label: Author
+        type: string
+      - name: image
+        label: Cover Image
+        type: image
+      - name: publishedAt
+        label: Date
+        type: date
+      - name: duration
+        label: Duration
+        type: string
+        required: true
+        list:
+          collapsible: true
+          max: 2
       - name: techStack
-        label: techStack
+        label: Tech Stacks
+        type: string
+        list: true
+      - name: skill
+        label: PM Skills
         type: string
         list: true
       - name: body
