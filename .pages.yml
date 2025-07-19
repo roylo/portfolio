@@ -36,6 +36,7 @@ content:
     view:
       fields: [ image, title, publishedAt ]
       sort: [ publishedAt ]
+      default: { sort: publishedAt, order: desc }
     fields:
       - name: title
         label: Title
