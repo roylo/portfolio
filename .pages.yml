@@ -33,7 +33,7 @@ content:
     type: collection
     path: 'content/projects'
     view:
-      fields: [ title, publishedAt ]
+      fields: [ image, title, publishedAt ]
     fields:
       - name: title
         label: Title
@@ -74,7 +74,7 @@ content:
     type: collection
     path: 'content/fragments'
     view:
-      fields: [ title, publishedAt, image ]
+      fields: [ image, title, publishedAt ]
     fields:
       - name: title
         label: Title
