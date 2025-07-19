@@ -9,7 +9,7 @@
     - AWS
   duration:
     - 2025
-  publishedAt: '2025-04-01'
+  publishedAt: 2025-04-01
 ---
 
 An h1 header

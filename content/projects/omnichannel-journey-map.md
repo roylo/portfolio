@@ -14,7 +14,7 @@
     - 2023
     - 2024
   author: Produce Lead
-  publishedAt: '2024-08-10'
+  publishedAt: 2024-08-10
 ---
 
 An h1 header

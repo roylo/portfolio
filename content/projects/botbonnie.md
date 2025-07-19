@@ -16,9 +16,9 @@
     - Redux
     - AWS
   duration:
-    - '2016'
-    - '2021'
-  publishedAt: '2021-06-01'
+    - 2016
+    - 2021
+  publishedAt: 2021-06-01
 ---
 
 An h1 header

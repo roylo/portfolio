@@ -7,7 +7,7 @@
     - Javascript
   duration:
     - 2014
-  publishedAt: '2014-04-14'
+  publishedAt: 2014-04-14
 ---
 
 An h1 header
