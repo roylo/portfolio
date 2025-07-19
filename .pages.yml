@@ -1,7 +1,7 @@
 media: public
 content:
   - name: posts
-    label: My Posts
+    label: Posts
     type: collection
     path: 'content/posts'
     view:
@@ -16,3 +16,27 @@ content:
       - name: body
         label: Body
         type: rich-text
+  - name: projects
+    label: Projects
+    type: collection
+    path: 'content/projects'
+    view:
+      fields: [ title, publishedAt ]
+    fields:
+      - name: summary
+        label: Summary
+        type: text
+      - name: publishedAt
+        label: Date
+        type: date
+      - name: title
+        label: Title
+        type: string
+      - name: techStack
+        label: techStack
+        type: string
+        list: true
+      - name: body
+        label: Body
+        type: rich-text
+    
