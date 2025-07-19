@@ -7,7 +7,7 @@ author: Co-Founder & CEO
 image: /public/images/projects/fitribe.webp
 publishedAt: 2016-08-01
 duration:
-  - "'2015'"
+  - "2015"
 techStack:
   - Swift
   - Parse
