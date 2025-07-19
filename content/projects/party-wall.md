@@ -4,8 +4,11 @@
   image: /images/projects/party-wall.webp
   url: https://wall.roylo.fun
   author: Roy Lo
-  techStack: ['React', 'AWS']
-  duration: ['2025']
+  techStack:
+    - React
+    - AWS
+  duration:
+    - 2025
   publishedAt: '2025-04-01'
 ---
 
