@@ -20,3 +20,4 @@ look like:
   * that one
   * the other one
 
+  techStack: ['Swift', 'Parse', 'Sinch', 'AWS']
