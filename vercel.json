@@ -1,9 +1,9 @@
 {
-  "git": {
-    "deploymentEnabled": {
-      "main": true,
-      "develop": true,
-      "content": false
-    }
-  }
+  // "git": {
+  //   "deploymentEnabled": {
+  //     "main": true,
+  //     "develop": true,
+  //     "content": false
+  //   }
+  // }
 }
