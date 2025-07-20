@@ -22,7 +22,7 @@ export default function Header() {
   
   return (
     <header className='fixed inset-x-0 top-0 z-50 bg-background/75 py-6 backdrop-blur-sm'>
-      <nav className='container max-w-3xl flex items-center justify-between'>
+      <nav className='container max-w-4xl flex items-center justify-between'>
         <div className='flex items-center gap-2'>
           <Image
               className='flex-1 rounded-xs'
