@@ -88,7 +88,8 @@ content:
       - name: image
         label: Image
         type: image
-        path: /images/fragments
+        options:
+          path: images/fragments
       - name: author
         label: Author
         type: string
