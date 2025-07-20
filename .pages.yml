@@ -89,7 +89,7 @@ content:
         label: Image
         type: image
         options:
-          path: images/fragments
+          path: public/images/fragments
       - name: author
         label: Author
         type: string
