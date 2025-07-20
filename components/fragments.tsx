@@ -2,6 +2,7 @@
 
 import { FragmentMetadata } from '@/lib/content'
 import React, { useState } from 'react'
+import Image from 'next/image'
 
 function LocationIcon({ className = "inline-block w-4 h-4 mr-1 -mt-0.5" }) {
   return (
@@ -52,11 +53,18 @@ export default function Fragments({ fragments }: { fragments: FragmentMetadata[]
           className="relative group rounded-md overflow-hidden mb-4 break-inside-avoid border border-gray-200 cursor-pointer"
           onClick={() => openModal(el)}
         >
-          <img
-            src={el.image}
-            alt={el.title}
-            className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
-          />
+          <div className="relative w-full">
+            <Image
+              src={el.image || ''}
+              alt={el.title || ''}
+              className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
+              width={800}
+              height={600}
+              style={{ width: '100%', height: 'auto' }}
+              sizes="(max-width: 768px) 100vw, 800px"
+              priority={false}
+            />
+          </div>
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <div className="absolute bottom-0 left-0 w-full flex flex-col items-start">
@@ -82,11 +90,18 @@ export default function Fragments({ fragments }: { fragments: FragmentMetadata[]
       {selectedFragment && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80" onClick={closeModal}>
           <div className="relative max-w-4xl max-h-[90vh] mx-4" onClick={(e) => e.stopPropagation()}>
-            <img
-              src={selectedFragment.image}
-              alt={selectedFragment.title}
-              className="w-full h-auto max-h-[90vh] object-contain rounded-lg"
-            />
+            <div className="relative w-full h-auto max-h-[90vh]">
+              <Image
+                src={selectedFragment.image || ''}
+                alt={selectedFragment.title || ''}
+                className="w-full h-auto max-h-[90vh] object-contain rounded-lg"
+                width={1200}
+                height={900}
+                style={{ width: '100%', height: 'auto', maxHeight: '90vh', objectFit: 'contain', borderRadius: '0.5rem' }}
+                sizes="(max-width: 1024px) 100vw, 1200px"
+                priority
+              />
+            </div>
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
               <h3 className="text-white text-xl font-semibold">{selectedFragment.title}</h3>
               {selectedFragment.location && (

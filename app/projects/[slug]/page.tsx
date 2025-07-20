@@ -24,7 +24,7 @@ export default async function Project({ params }: { params: Promise<{ slug: stri
 
   const { metadata, content } = project
   // Cast metadata to ProjectMetadata for type safety
-  const { title, image, author, techStack, skill, duration, photos } = metadata as ProjectMetadata & { photos?: any[] }
+  const { title, image, author, techStack, skill, duration, photos } = metadata as ProjectMetadata
   const fragments = photos?.map((photo) => ({
     image: photo,
     slug: photo
