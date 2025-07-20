@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import authorImage from '@/public/images/authors/Roy.jpg'
+import { Button } from '@/components/ui/button'
+import { Download } from 'lucide-react'
 
 export default function Intro() {
   return (
@@ -30,6 +32,24 @@ export default function Intro() {
           At every stage, I&apos;ve deepened my curiosity, sharpened my problem-solving, 
           and built the instincts to thrive in fast-moving, cross-disciplinary environments.
         </p>
+        <div className='mt-6'>
+          <Button 
+            variant="outline" 
+            size="lg" 
+            asChild
+            className="gap-2"
+          >
+            <a 
+              href="/files/roylo-2025.07.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              download
+            >
+              <Download className="h-4 w-4" />
+              My Resume
+            </a>
+          </Button>
+        </div>
       </div>
     </section>
   )
