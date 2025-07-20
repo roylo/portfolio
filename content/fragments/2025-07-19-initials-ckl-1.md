@@ -1,5 +1,5 @@
 ---
-title: Initials (CKL)
+title: Initials (CKL) - 2
 location: Stanford d.school Design Sketching
 image: /0430_initials-2.webp
 author: Roy Lo
