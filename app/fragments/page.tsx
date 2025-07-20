@@ -10,7 +10,7 @@ export default async function FragmentsPage() {
         className="
           container
           mx-auto
-          max-w-6xl
+          max-w-4xl
           space-y-2
           columns-1
           sm:columns-2
