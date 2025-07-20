@@ -50,6 +50,12 @@ content:
       - name: image
         label: Cover Image
         type: image
+      - name: photos
+        label: Photos
+        type: image
+        options:
+          path: public/images/projects
+          extensions: [jpg, png, webp]
       - name: publishedAt
         label: Date
         type: date
