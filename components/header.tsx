@@ -85,7 +85,7 @@ export default function Header() {
           />
           {/* Menu */}
           <div className='md:hidden fixed top-20 left-0 right-0 bg-white dark:bg-gray-900 z-50 shadow-lg animate-in slide-in-from-top-2 duration-300'>
-            <div className='container max-w-3xl px-6 py-8'>
+            <div className='container max-w-4xl px-6 py-8'>
               <ul className='flex flex-col space-y-4'>
                 <li>
                   <Link 
