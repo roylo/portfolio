@@ -96,6 +96,10 @@
 }
 
 @layer utilities {
+  .prose {
+    max-width: 100%;
+  }
+
   .prose pre {
     background-color: var(--accent);
   }
