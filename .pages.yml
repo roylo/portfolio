@@ -73,8 +73,11 @@ content:
         list: true
       - name: skill
         label: PM Skills
-        type: string
-        list: true
+        type: select
+        options:
+          creatable: true
+          multiple: true
+          values: [ Product Strategy, Roadmap Planning, Cross-Functional Collaboration, User Research, Data-Driven Decision Making, Agile Methodologies, Go-to-Market Strategy, Stakeholder Management, Prioritization, Customer-Centric Design ]
       - name: body
         label: Body
         type: rich-text
