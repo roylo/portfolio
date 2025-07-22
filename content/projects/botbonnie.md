@@ -1,5 +1,5 @@
 ---
-title: BotBonnie
+title: BotBonnie (Acquired By Appier)
 summary: BotBonnie is a marketing automation SaaS built on social messaging
   platforms. Founded in 2016, we bootstrapped it into a multi-million-dollar
   business with a lean team of 20 in just five years, and it was acquired by
@@ -26,12 +26,23 @@ skill:
   - Customer-Centric Design
   - From Zero to One
 ---
-# An h1 header
+## **Conversational Marketing Platform for Asia’s Leading Brands**
 
-Paragraphs are separated by a blank line.
+I co-founded BotBonnie to help businesses engage and convert customers through conversational experiences. We built an all-in-one chatbot platform for Facebook Messenger, LINE, Web, Instagram, Kakao Talk, and WhatsApp enabling marketers to launch interactive campaigns without writing code.
 
-2nd paragraph. _Italic_, **bold**, and `monospace`. Itemized lists look like:
+### **Key Highlights**
 
-*   this one
-*   that one
-*   the other one
+*   Bootstrapped the business to $X m+ annual recurring revenue with 75% gross margin
+    
+*   Served XXX+ enterprise clients including Audi, Uniqlo, and GSK across Asia
+    
+*   Personally led product, engineering, and go-to-market execution; built and launched the MVP
+    
+*   Selected by Facebook F8 as a global success case and recognized by Google Business Messages for product innovation
+    
+*   Scaled the team from 4 to 18 with <3-month onboarding; achieved 90%+ annual employee retention
+    
+*   Introduced OKRs and quarterly reviews; earned 85/100 in company-wide leadership score
+    
+
+BotBonnie empowered brands to turn chats into conversions. This journey honed my ability to ship enterprise SaaS, scale across markets, and build teams that move fast and learn faster.
