@@ -26,6 +26,10 @@ techStack:
   - Parse
   - Sinch
   - AWS
+skill:
+  - Roadmap Planning
+  - Prioritization
+  - User Research
 ---
 ## **Social Fitness App to Motivate Healthy Habits**
 
