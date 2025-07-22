@@ -27,12 +27,21 @@ techStack:
   - Sinch
   - AWS
 ---
-# An h1 header
+## **Social Fitness App to Motivate Healthy Habits**
 
-Paragraphs are separated by a blank line.
+Fitribe was an iOS app I built and launched in just 3 months, designed to help users build consistent fitness habits through community-driven accountability. Inspired by the power of social motivation, the app combined gamification, habit tracking, and peer support to keep users engaged.
 
-2nd paragraph. _Italic_, **bold**, and `monospace`. Itemized lists look like:
+### **Key Highlights**
 
-*   this one
-*   that one
-*   the other one techStack: \['Swift', 'Parse', 'Sinch', 'AWS'\]
+*   Launched MVP in **90 days** and iterated over 30 versions based on user feedback
+    
+*   Featured on the App Store as a top local creative app
+    
+*   Reached over **XXK** monthly active users (MAU)
+    
+*   Introduced a gamified unlock system that boosted engagement by 50%
+    
+*   Conducted 30+ user interviews to refine core features and monetization strategy
+    
+
+Fitribe was more than a fitness tracker. It was a tribe where people didn’t compete, but showed up for each other. This startup sharpened my skills in rapid prototyping, growth experimentation, and building sticky user experiences from zero to scale.
