@@ -19,6 +19,8 @@ content:
       - name: image
         label: Image
         type: image
+        options:
+          path: public/images/projects
       - name: author
         label: Author
         type: string
@@ -53,6 +55,8 @@ content:
       - name: image
         label: Cover Image
         type: image
+        options:
+          path: public/images/projects
       - name: gallery
         label: Gallery
         type: object
