@@ -6,6 +6,11 @@ summary: BotBonnie is a marketing automation SaaS built on social messaging
   Appier in 2021.
 author: Co-Founder & CEO
 image: /images/projects/botbonnie-cover.webp
+gallery:
+  - description: Our day 1 meeting!
+    image: /images/projects/BB_V0_day0.jpg
+  - description: The first wireframe
+    image: /images/projects/BB_V0_wireframe.png
 publishedAt: 2021-06-01
 duration:
   - "2016"
