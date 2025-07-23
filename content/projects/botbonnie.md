@@ -11,6 +11,20 @@ gallery:
     image: /images/projects/BB_V0_day0.jpg
   - description: The first wireframe
     image: /images/projects/BB_V0_wireframe.png
+  - description: Product V1 - Chat Flow
+    image: /images/projects/BB_V1_flow.png
+  - description: Product V1 - Module Insight
+    image: /images/projects/BB_V1_insight.png
+  - description: Product V2 - Bot List
+    image: /images/projects/BB_V2_botlist.png
+  - description: Product V2 - Chat Flow
+    image: /images/projects/BB_V2_flow.png
+  - description: Product V3 - Chat Flow
+    image: /images/projects/BB_V3_flow.png
+  - description: Product V3 - Livechat
+    image: /images/projects/BB_V3_livechat.png
+  - description: Product V3 - User Detail
+    image: /images/projects/BB_V3_user.png
 publishedAt: 2021-06-01
 duration:
   - "2016"
