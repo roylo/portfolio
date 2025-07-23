@@ -40,7 +40,7 @@ export default function Intro() {
             className="gap-2"
           >
             <a 
-              href="/files/roylo-2025.07.pdf" 
+              href="/files/roylo-20250723.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
               download
