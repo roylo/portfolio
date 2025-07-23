@@ -2,7 +2,7 @@
 title: The meaning of life - Abby's Birth
 summary: Have you ever thought about why you work so hard every day? What drives
   you to wake up early and stay up late perfecting your work?
-image: /Abby_baby.jpg
+image: /images/posts/Abby_baby.jpg
 author: Roy Lo
 publishedAt: 2024-07-29
 ---

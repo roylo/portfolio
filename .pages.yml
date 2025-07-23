@@ -20,7 +20,7 @@ content:
         label: Image
         type: image
         options:
-          path: public/images/projects
+          path: public/images/posts
       - name: author
         label: Author
         type: string

@@ -3,7 +3,7 @@ title: The job of a company torchbearer
 summary: Ever wondered how startup culture is built from the ground up? Here’s
   my story of how a simple question from a teammate sparked a journey to shape
   the heart of BotBonnie.
-image: /1_SPAKMY9RvSBTdzsvPvsqog.webp
+image: /images/posts/1_SPAKMY9RvSBTdzsvPvsqog.webp
 author: Roy Lo
 publishedAt: 2020-02-24
 ---
