@@ -7,6 +7,17 @@ summary: The Omnichannel Journey Map unifies all customer touchpoints into a
   LINE, WhatsApp, and Instagram.
 author: Produce Lead
 image: /images/projects/journey-map.webp
+gallery:
+  - description: Journey Map Flow
+    image: /images/projects/PHX_JM_flow.png
+  - description: Journey Map Node Stats
+    image: /images/projects/PHX_JM_node_states.png
+  - description: Journey Map Node Perf.
+    image: /images/projects/PHX_JM_node_performance.png
+  - description: Journey Map Node Perf.
+    image: /images/projects/PHX_JM_node_performance_2.png
+  - description: Journey Map Dashboard
+    image: /images/projects/PHX_JM_dashboard.png
 publishedAt: 2024-08-10
 duration:
   - "2023"
