@@ -36,12 +36,15 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         </Link>
 
         {image && (
-          <div className='relative mb-6 h-96 w-full overflow-hidden rounded-lg'>
+          <div className='mb-10 w-full flex justify-center'>
             <Image
               src={image}
               alt={title || ''}
-              className='object-cover'
-              fill
+              width={1200}
+              height={600}
+              className='rounded-lg bg-neutral-100 object-contain'
+              style={{ maxHeight: 600, width: '100%', height: 'auto', maxWidth: '100%' }}
+              priority
             />
           </div>
         )}
