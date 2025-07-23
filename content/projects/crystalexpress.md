@@ -3,6 +3,7 @@ title: CrystalExpress iOS SDK
 summary: CrystalExpress is an iOS SDK that delivers high-quality native video
   ads with zero playback delay. We partnered with Taiwan’s leading news app to
   serve ads to millions of users daily.
+url: https://cocoapods.org/pods/CrystalExpressSDK
 author: iOS developer & TPM
 image: /images/projects/crystal-express.webp
 publishedAt: 2015-04-10
