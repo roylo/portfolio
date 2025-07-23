@@ -1,5 +1,5 @@
 ---
-title: A Bidding for the Life You Will Live
+title: A bidding for the life you will live
 summary: I can’t recall the exact age when this happened, but it was around 5th
   grade. One day, my teacher introduced a game called “Bidding Your Life.”
 author: Roy Lo
