@@ -9,6 +9,21 @@ skill:
   - Product Ideaiation
   - Product Prototyping
 ---
-### **Best UX Hack – Yahoo! TW Internal Hackday (2013)**
+## **30-Second Mobile Selling Experience — Yahoo! Hackday Winner**
 
-Before Yahoo! TW launched its e-commerce mobile app, we prototyped a mobile-first experience that let users list products by simply taking a photo—streamlining the entire flow from snap to live listing in under 30 seconds.
+Before Yahoo! launched its official mobile commerce app, I co-created **隨拍即賣**, a mobile-first concept that let users take a photo, auto-fill product details, and list it for sale—all in under 30 seconds.
+
+### **Key Highlights**
+
+*   Won **Best UX Hack** at Yahoo! Taiwan 2013 Internal Hackday
+    
+*   Designed intuitive flow: snap photo → auto-suggest title/category → list instantly
+    
+*   Eliminated friction for casual sellers, showing what mobile-first commerce could feel like
+    
+*   Inspired early-stage discussions around mobile UX for Yahoo Auctions
+    
+*   Prototyped with a full working demo in less than 48 hours
+    
+
+This project was a glimpse into the future of mobile e-commerce—simple, fast, and seller-centric.
