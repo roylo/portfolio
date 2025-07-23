@@ -1,27 +1,36 @@
 ---
-  title: CrystalExpress iOS SDK
-  summary: CrystalExpress is an iOS SDK that delivers high-quality native video ads with zero playback delay. We partnered with Taiwan’s leading news app to serve ads to millions of users daily.
-  image: /images/projects/crystal-express.webp
-  author: iOS developer & TPM
-  techStack:
-    - Objective-C
-    - CocoaPods
-    - Multi-threading
-    - AWS
-  duration:
-    - 2015
-  publishedAt: 2015-04-10
+title: CrystalExpress iOS SDK
+summary: CrystalExpress is an iOS SDK that delivers high-quality native video
+  ads with zero playback delay. We partnered with Taiwan’s leading news app to
+  serve ads to millions of users daily.
+url: https://cocoapods.org/pods/CrystalExpressSDK
+author: iOS developer & TPM
+image: /images/projects/crystal-express.webp
+gallery:
+  - description: Demo Splash and Native Card
+    image: /images/projects/CE_demo.webp
+publishedAt: 2015-04-10
+duration:
+  - "2015"
+techStack:
+  - Objective-C
+  - CocoaPods
+  - Multi-threading
+  - AWS
 ---
+## **High-Performance iOS Ad SDK for Mobile Video Monetization**
 
-An h1 header
-============
+At Intowow, I led the development of iOS CrystalExpress, a lightweight SDK built to deliver native video ads instantly and at scale. The SDK was optimized for performance and seamless UX, powering monetization for major mobile publishers.
 
-Paragraphs are separated by a blank line.
+### **Key Highlights**
 
-2nd paragraph. *Italic*, **bold**, and `monospace`. Itemized lists
-look like:
+*   Engineered and launched the SDK from scratch within 3 months to meet key client deadlines
+    
+*   Delivered over **X** m HD video ads per day with near-zero latency
+    
+*   Boosted ad click-through rates by **xx%** through smart caching and rendering optimization
+    
+*   Successfully integrated with Taiwan’s #1 news app, serving millions of users daily
+    
 
-  * this one
-  * that one
-  * the other one
-
+This project gave me hands-on experience balancing system performance, mobile UX, and business outcomes under aggressive timelines.

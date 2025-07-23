@@ -1,9 +1,12 @@
 import { getContentBySlug, getContent, ProjectMetadata } from "@/lib/content"
 import { notFound } from "next/navigation"
 import Link from "next/link"
-import { ArrowLeftIcon } from "lucide-react"
+import { ArrowLeftIcon, ExternalLink } from "lucide-react"
 import Image from "next/image"
 import MDXContent from "@/components/mdx-content"
+import Fragments from "@/components/fragments" // Reuse Fragment component
+import { FragmentMetadata } from "@/lib/content"
+import { Button } from '@/components/ui/button'
 
 export async function generateStaticParams() {
   const projects = await getContent(undefined, 'projects')
@@ -22,11 +25,16 @@ export default async function Project({ params }: { params: Promise<{ slug: stri
 
   const { metadata, content } = project
   // Cast metadata to ProjectMetadata for type safety
-  const { title, image, author, techStack, skill, duration } = metadata as ProjectMetadata
+  const { title, image, author, techStack, skill, duration, gallery, url } = metadata as ProjectMetadata
+  const fragments = gallery?.map((item) => ({
+    title: item.description,
+    image: item.image,
+    slug: item.image
+  })) as FragmentMetadata[]
 
   return (
     <section className='pb-24 pt-32'>
-      <div className='container max-w-3xl'>
+      <div className='container max-w-4xl'>
         <Link
           href='/projects'
           className='mb-8 inline-flex items-center gap-2 text-sm font-light text-muted-foreground transition-colors hover:text-foreground'
@@ -36,28 +44,47 @@ export default async function Project({ params }: { params: Promise<{ slug: stri
         </Link>
 
         {image && (
-          <div className='relative mb-6 h-96 w-full overflow-hidden rounded-lg'>
+          <div className='relative mb-6 h-92 w-full max-w-xl mx-auto overflow-hidden rounded-lg'>
             <Image
               src={image}
               alt={title || ''}
-              className='object-cover'
+              className='object-contain'
               fill
             />
           </div>
         )}
 
-        <header>
-          <h1 className='title'>{title}</h1>
-          <h2 className='mt-3 text-sm font-medium'>
-            {author}
-            {Array.isArray(duration) && duration.length > 0 && (
-              <>
-                {" / "}
-                {duration[0]}
-                {duration[1] && ` ~ ${duration[1]}`}
-              </>
-            )}
-          </h2>
+        <header className="flex items-start justify-between gap-4">
+          <div>
+            <h1 className='title'>{title}</h1>
+            <h2 className='mt-3 text-sm font-medium'>
+              {author}
+              {Array.isArray(duration) && duration.length > 0 && (
+                <>
+                  {" / "}
+                  {duration[0]}
+                  {duration[1] && ` ~ ${duration[1]}`}
+                </>
+              )}
+            </h2>
+          </div>
+          {url && (
+            <Button 
+              variant="outline" 
+              size="lg" 
+              asChild
+              className="gap-2"
+            >
+              <a 
+                href={url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <ExternalLink className="h-4 w-4" />
+                Visit Site
+              </a>
+            </Button>
+          )}
         </header>
 
         {/* Project meta labels */}
@@ -104,7 +131,27 @@ export default async function Project({ params }: { params: Promise<{ slug: stri
           <MDXContent source={content} />
         </main>
 
+        {/* Photos section */}
+        {Array.isArray(fragments) && fragments.length > 0 && (
+          <section className="mt-16">
+            <h3 className="mb-4 text-lg font-semibold">Gallery</h3>
+            <div
+              className="
+                space-y-2
+                columns-1
+                sm:columns-2
+                md:columns-3
+                lg:columns-4
+                gap-4
+              "
+            >   
+              <Fragments fragments={fragments} />
+            </div>
+          </section>
+        )}
+
       </div>
+       
     </section>
   )
 }
