@@ -4,6 +4,8 @@ import Link from "next/link"
 import { ArrowLeftIcon } from "lucide-react"
 import Image from "next/image"
 import MDXContent from "@/components/mdx-content"
+import Fragments from "@/components/fragments" // Reuse Fragment component
+import { FragmentMetadata } from "@/lib/content"
 
 export async function generateStaticParams() {
   const projects = await getContent(undefined, 'projects')
@@ -22,11 +24,15 @@ export default async function Project({ params }: { params: Promise<{ slug: stri
 
   const { metadata, content } = project
   // Cast metadata to ProjectMetadata for type safety
-  const { title, image, author, techStack, skill, duration } = metadata as ProjectMetadata
+  const { title, image, author, techStack, skill, duration, photos } = metadata as ProjectMetadata
+  const fragments = photos?.map((photo) => ({
+    image: photo,
+    slug: photo
+  })) as FragmentMetadata[]
 
   return (
     <section className='pb-24 pt-32'>
-      <div className='container max-w-3xl'>
+      <div className='container max-w-4xl'>
         <Link
           href='/projects'
           className='mb-8 inline-flex items-center gap-2 text-sm font-light text-muted-foreground transition-colors hover:text-foreground'
@@ -36,11 +42,11 @@ export default async function Project({ params }: { params: Promise<{ slug: stri
         </Link>
 
         {image && (
-          <div className='relative mb-6 h-96 w-full overflow-hidden rounded-lg'>
+          <div className='relative mb-6 h-92 w-full max-w-xl mx-auto overflow-hidden rounded-lg'>
             <Image
               src={image}
               alt={title || ''}
-              className='object-cover'
+              className='object-contain'
               fill
             />
           </div>
@@ -104,7 +110,28 @@ export default async function Project({ params }: { params: Promise<{ slug: stri
           <MDXContent source={content} />
         </main>
 
+        {/* Photos section */}
+        {Array.isArray(fragments) && fragments.length > 0 && (
+          <section className="mt-16">
+            <h3 className="mb-4 text-lg font-semibold">Photos</h3>
+            <div
+              className="
+
+                space-y-2
+                columns-1
+                sm:columns-2
+                md:columns-3
+                lg:columns-4
+                gap-4
+              "
+            >   
+              <Fragments fragments={fragments} />
+            </div>
+          </section>
+        )}
+
       </div>
+       
     </section>
   )
 }

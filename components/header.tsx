@@ -22,7 +22,7 @@ export default function Header() {
   
   return (
     <header className='fixed inset-x-0 top-0 z-50 bg-background/75 py-6 backdrop-blur-sm'>
-      <nav className='container max-w-3xl flex items-center justify-between'>
+      <nav className='container max-w-4xl flex items-center justify-between'>
         <div className='flex items-center gap-2'>
           <Image
               className='flex-1 rounded-xs'
@@ -85,7 +85,7 @@ export default function Header() {
           />
           {/* Menu */}
           <div className='md:hidden fixed top-20 left-0 right-0 bg-white dark:bg-gray-900 z-50 shadow-lg animate-in slide-in-from-top-2 duration-300'>
-            <div className='container max-w-3xl px-6 py-8'>
+            <div className='container max-w-4xl px-6 py-8'>
               <ul className='flex flex-col space-y-4'>
                 <li>
                   <Link 
