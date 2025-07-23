@@ -15,24 +15,32 @@ In those early years, we focused almost entirely on building our MVP and seizing
 
 Then one day, during a one-on-one, a usually quiet teammate asked me, “What is BotBonnie’s company culture?” The question hit me like a hammer. I realized I didn’t have a good answer. I defaulted to startup clichés and listed off a few personality traits I admired. But deep down, I knew I was just giving a personal view. It was nowhere near a shared or credible company culture. Around that time, the overall morale hit a low point. I even started questioning the meaning of my own work. Eventually, that teammate decided to leave, and the experience stayed with me like a lingering shadow. Company culture became an unsolvable puzzle in my mind, something like an NP-hard problem, as us nerdy engineers would say.
 
+<p style="text-align: center"><img src="/images/posts/life_is_hard.gif"></p>
+
 That moment pushed me to start reflecting. What concrete things can we do to build a positive culture? How do great companies in Silicon Valley maintain strong, values-driven environments?
 
 One benefit of running your own company is having the freedom to run experiments. So I decided to treat this like one. I borrowed ideas from successful companies, opened up more internal conversations, and over the course of a year, we tried the following:
 
-*   **Teamwide personality interviews**: We added a new step in our hiring process where all team members participate. Candidates spend 15 to 20 minutes sharing their past work and personal traits, and teammates ask questions. This helps both sides understand each other better and lowers future friction when working together.
+1.  **Teamwide personality interviews**: We added a new step in our hiring process where all team members participate. Candidates spend 15 to 20 minutes sharing their past work and personal traits, and teammates ask questions. This helps both sides understand each other better and lowers future friction when working together.
     
-*   **External speaker sessions**: Every quarter, we invite industry experts to speak to the team. These sessions give us fresh perspectives and let us learn from the career paths of others. It’s a rare chance to see how different roles achieve success and the effort it takes behind the scenes.
+2.  **External speaker sessions**: Every quarter, we invite industry experts to speak to the team. These sessions give us fresh perspectives and let us learn from the career paths of others. It’s a rare chance to see how different roles achieve success and the effort it takes behind the scenes.
     
-*   **Book clubs**: We launched internal reading groups and encouraged everyone to take part. By leading discussions and sharing takeaways, we created space for self-driven learning and collective growth.
+3.  **Book clubs**: We launched internal reading groups and encouraged everyone to take part. By leading discussions and sharing takeaways, we created space for self-driven learning and collective growth.
     
-*   **Off-site boot camps**: We organized workshops where teammates reflected on past experiences and discussed their ideal work cultures. These simple sessions helped us understand each other and align more deeply.
+4.  **Off-site boot camps**: We organized workshops where teammates reflected on past experiences and discussed their ideal work cultures. These simple sessions helped us understand each other and align more deeply.
     
-*   **Everyone is a product manager**: We encouraged teammates to create and own tasks, not just for themselves but also for the team. No matter their title, anyone can raise important problems, and solving each other’s blockers is a top priority.
+5.  **Everyone is a product manager**: We encouraged teammates to create and own tasks, not just for themselves but also for the team. No matter their title, anyone can raise important problems, and solving each other’s blockers is a top priority.
     
-*   **Focus on problems, not blame**: Bugs and mistakes are inevitable in software. Our focus is always on fixing the issue and preventing recurrence. We encourage risk-taking and own the outcomes together as a team.
+6.  **Focus on problems, not blame**: Bugs and mistakes are inevitable in software. Our focus is always on fixing the issue and preventing recurrence. We encourage risk-taking and own the outcomes together as a team.
     
-*   **Profit-sharing**: A portion of platform revenue goes toward company-wide bonuses. Growth is a team effort, and every role—business development, product, design, engineering, support, admin—contributes to the outcome.
+7.  **Profit-sharing**: A portion of platform revenue goes toward company-wide bonuses. Growth is a team effort, and every role—business development, product, design, engineering, support, admin—contributes to the outcome.
     
+
+<p style="text-align: center"><img src="/images/posts/1_NaQWGuHHW-loJyrgkVHWGQ.webp"></p><p style="text-align: center"><em>Offsite bootcamp in a coffee shop owned by our team member!</em></p>
+
+<p style="text-align: center"><img src="/images/posts/1_c36OZKkAp3B7szlc7phGhw.webp"></p><p style="text-align: center"><em>Expert sharing - digital marketing and Taiwan Digital Diplomacy</em></p>
+
+<p style="text-align: center"><img src="/images/posts/1_63umxabIPrAZ_thGqkhsXQ.webp"></p><p style="text-align: center"><em>Expert Sharing - How Netflix do A/B testing?</em></p>
 
 In a recent workshop on culture, we asked every teammate to list three to five values they hoped the company would embody, then took turns sharing them. To my surprise, many answers overlapped. Some values were already starting to take root organically. The top recurring themes were:
 
@@ -49,8 +57,12 @@ In a recent workshop on culture, we asked every teammate to list three to five v
 
 This thirty-minute session brought a small but powerful sense of alignment. Yes, we could grow in this direction. Yes, I wanted to build a company like this. Yes, I wanted to create the world’s best SAAS platform with a team like this. These little yeses echoed in my heart as I listened, and I thought: maybe this really is the beginning of something meaningful.
 
+<p style="text-align: center"><img src="/images/posts/1_uQc644H1aFqoInPm0IOE_w.webp"></p><p style="text-align: center"><em>The culture notes created by our team members</em></p>
+
 Sometimes I wonder: why did it take me nearly three years to start caring about something that doesn’t seem directly tied to revenue? Is now even the right time to be doing this? But after everything we’ve tried, I truly believe this is one of the best investments we can make. A team that is aligned and united is one that can deliver the best results for our customers. I don’t yet have a perfect answer on how much impact these culture experiments will have. But my belief in the startup mindset—keep experimenting—is what makes this all worth doing. It has even become fun for me.
 
 To say BotBonnie already has a great company culture would be premature. We’re still far from the strong identities seen in many famous Silicon Valley companies. But we’re open to learning, we welcome feedback, and we embrace change. Flexibility is one of the values we aspire to. If something benefits our company or our product, we’re open to trying it.
+
+<p style="text-align: center"><img src="/images/posts/leader.gif"></p>
 
 The job of the torchbearer is not necessarily to illuminate the one correct path, but to ignite flames in the hearts of others. With more torches lit, we can explore more paths together.
