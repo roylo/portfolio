@@ -12,9 +12,9 @@ gallery:
     image: /images/projects/TB-planning.png
   - description: Social Comments
     image: /images/projects/TB-comments.png
-publishedAt: 2019-11-01
+publishedAt: 2009-11-01
 duration:
-  - "2019"
+  - "2009"
 ---
 ## **Social Travel Planning App for Friends on Facebook**
 
