@@ -57,6 +57,19 @@ content:
           multiple: true
           path: public/images/projects
           extensions: [jpg, png, webp]
+      - name: gallery
+        label: Gallery
+        type: object
+        list: true
+        fields:
+          - name: description
+            label: Description
+            type: string
+          - name: image
+            label: image
+            type: image
+            options:
+              path: public/images/projects
       - name: publishedAt
         label: Date
         type: date
