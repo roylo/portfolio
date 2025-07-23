@@ -50,13 +50,6 @@ content:
       - name: image
         label: Cover Image
         type: image
-      - name: photos
-        label: Photos
-        type: image
-        options:
-          multiple: true
-          path: public/images/projects
-          extensions: [jpg, png, webp]
       - name: gallery
         label: Gallery
         type: object

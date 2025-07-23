@@ -38,7 +38,10 @@ export type ProjectMetadata = {
   skill?: string[]
   techStack?: string[]
   duration: string[]
-  photos?: string[]
+  gallery?: {
+    description?: string
+    image: string
+  }[]
   slug: string
 }
 
