@@ -29,7 +29,7 @@ At Appier, I led the **Omnichannel Journey Map** initiative, a next-gen marketin
 
 *   Initiated and led development across 3 product lines, aligning product vision, engineering, and GTM
     
-*   Recovered $XXX K+ in at-risk annual recurring revenue during beta by solving major churn risk for key accounts
+*   Recovered $XXX K+ in at-risk annual recurring revenue during beta by demonstrating the project vision and MVP
     
 *   Built a cross-functional team of 8 and launched a scalable platform used by top enterprise clients
     
