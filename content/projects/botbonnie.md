@@ -40,7 +40,7 @@ I co-founded BotBonnie to help businesses engage and convert customers through c
     
 *   Selected by Facebook F8 as a global success case and recognized by Google Business Messages for product innovation
     
-*   Scaled the team from 4 to 18 with <3-month onboarding; achieved 90%+ annual employee retention
+*   Scaled the team from 4 to 18 within 3 months onboarding; achieved 90%+ annual employee retention
     
 *   Introduced OKRs and quarterly reviews; earned 85/100 in company-wide leadership score
     
