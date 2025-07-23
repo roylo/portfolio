@@ -3,6 +3,7 @@ title: Where’s that damn close button?
 summary: It’s 2015 and I’m the only iOS engineer at a small startup. My job was
   creating innovative mobile ads, and our first big client was a top news app,
   with millions of daily users. So, no pressure at all, right?
+image: /images/posts/missing_close.png
 author: Roy Lo
 publishedAt: 2025-05-25
 ---
