@@ -6,6 +6,9 @@ summary: CrystalExpress is an iOS SDK that delivers high-quality native video
 url: https://cocoapods.org/pods/CrystalExpressSDK
 author: iOS developer & TPM
 image: /images/projects/crystal-express.webp
+gallery:
+  - description: Demo Splash and Native Card
+    image: /images/projects/CE_demo.webp
 publishedAt: 2015-04-10
 duration:
   - "2015"
