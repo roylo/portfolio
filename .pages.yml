@@ -126,7 +126,7 @@ content:
     path: 'content/stories'
     view:
       fields: [ title, summary, publishedAt ]
-      default: { sort: publishedAt, order: desc }
+      default: { sort: timeframe, order: desc }
     fields:
       - name: title
         label: Title
