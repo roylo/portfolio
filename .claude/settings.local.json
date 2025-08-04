@@ -3,7 +3,9 @@
     "allow": [
       "Bash(mkdir:*)",
       "Bash(pnpm add:*)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "Bash(npm run process-stories:*)",
+      "Bash(git add:*)"
     ],
     "deny": []
   }

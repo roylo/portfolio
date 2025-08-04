@@ -82,6 +82,17 @@ This folder contains a comprehensive plan for implementing an AI-powered chatbot
 - Performance optimization and error handling
 - User experience testing and final refinements
 
+## 🚀 **Phase 2: Vector Database Enhancement** (Future)
+
+After the basic chatbot is functional, **Phase 2** will enhance story retrieval with semantic search using vector embeddings. This will replace keyword-based matching with intelligent, context-aware story discovery.
+
+**Key Improvements:**
+- 🎯 **Semantic search**: Find stories by meaning, not just keywords
+- 🚀 **Better relevance**: Match job requirements to similar experiences contextually
+- 📈 **Scalable**: Handle hundreds of stories with intelligent ranking
+
+**See**: [`phase-2-vector-enhancement.md`](./phase-2-vector-enhancement.md) for detailed implementation plan.
+
 ## Key Benefits
 
 ### For Recruiters & Hiring Managers

@@ -4,7 +4,12 @@
     "product_management": 1,
     "crisis_management": 1,
     "growth": 1,
-    "culture_building": 1
+    "culture_building": 1,
+    "empathy": 1,
+    "communication": 1,
+    "strategic thinking": 1,
+    "collaboration": 1,
+    "innovation": 1
   },
   "story_mapping": {
     "leadership": [
@@ -20,6 +25,21 @@
       "culture-building-botbonnie"
     ],
     "culture_building": [
+      "culture-building-botbonnie"
+    ],
+    "empathy": [
+      "culture-building-botbonnie"
+    ],
+    "communication": [
+      "culture-building-botbonnie"
+    ],
+    "strategic thinking": [
+      "culture-building-botbonnie"
+    ],
+    "collaboration": [
+      "culture-building-botbonnie"
+    ],
+    "innovation": [
       "culture-building-botbonnie"
     ]
   },
@@ -42,6 +62,26 @@
     },
     {
       "competency": "culture_building",
+      "story_count": 1
+    },
+    {
+      "competency": "empathy",
+      "story_count": 1
+    },
+    {
+      "competency": "communication",
+      "story_count": 1
+    },
+    {
+      "competency": "strategic thinking",
+      "story_count": 1
+    },
+    {
+      "competency": "collaboration",
+      "story_count": 1
+    },
+    {
+      "competency": "innovation",
       "story_count": 1
     }
   ]

@@ -10,25 +10,26 @@
       "product_management",
       "crisis_management",
       "growth",
-      "culture_building"
+      "culture_building",
+      "empathy",
+      "communication",
+      "strategic thinking",
+      "collaboration",
+      "innovation"
     ],
     "interviewCategories": [
-      "leadership_and_management",
-      "team_building",
-      "working_under_pressure",
-      "problem_solving",
-      "scaling_business",
-      "achieving_results",
-      "building_team_culture",
-      "employee_development"
+      "Leadership and Management",
+      "Team Dynamics",
+      "Culture and Values",
+      "Problem Solving",
+      "Change Management"
     ],
     "questionTypes": [
-      "Tell me about a time you led a team",
-      "How do you motivate people?",
-      "Describe a time you worked under pressure",
-      "Tell me about a challenging situation",
-      "Tell me about a time you achieved significant results",
-      "How do you drive growth?"
+      "Describe a time you improved team morale.",
+      "How did you handle a cultural challenge in your organization?",
+      "What strategies did you implement to foster collaboration?",
+      "Can you give an example of how you defined company values?",
+      "How do you measure the success of cultural initiatives?"
     ],
     "metrics": [
       "8 team members",

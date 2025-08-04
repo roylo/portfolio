@@ -1,8 +1,12 @@
 #!/usr/bin/env tsx
 
+import dotenv from 'dotenv';
 import fs from 'fs';
 import path from 'path';
 import { StoryProcessor, ProcessedStory } from '../lib/story-processor';
+
+// Load environment variables from .env.local
+dotenv.config({ path: '.env.local' });
 
 async function processAllStories() {
   const processor = new StoryProcessor();
