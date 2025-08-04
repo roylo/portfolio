@@ -125,7 +125,7 @@ content:
     type: collection
     path: 'content/stories'
     view:
-      fields: [ title, summary, publishedAt ]
+      fields: [ title, summary, timeframe ]
       default: { sort: timeframe, order: desc }
     fields:
       - name: title
