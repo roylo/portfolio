@@ -150,3 +150,6 @@ content:
       - name: publishedAt
         label: Date
         type: date
+      - name: body
+        label: Body
+        type: rich-text
