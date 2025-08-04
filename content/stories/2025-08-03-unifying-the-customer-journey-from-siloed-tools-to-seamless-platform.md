@@ -7,7 +7,7 @@ company: Appier
 role: Senior Director of Product Management
 timeframe:
   - 2022
-  - 2022
+  - 2023
 publishedAt: 2025-08-03
 ---
 After Appier acquired my startup BotBonnie, I began sitting in on cross-functional sales pitches and noticed a recurring issue: while we marketed an end-to-end marketing solution, our products were siloed. Clients had to log into multiple platforms, reconfigure settings, and reconcile inconsistent data across tools like AIQUA and BotBonnie. This created a huge gap between what we promised and what we delivered—leading to poor product experience and low renewal intent.
