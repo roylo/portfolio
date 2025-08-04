@@ -1,0 +1,48 @@
+{
+  "competencies": {
+    "leadership": 1,
+    "product_management": 1,
+    "crisis_management": 1,
+    "growth": 1,
+    "culture_building": 1
+  },
+  "story_mapping": {
+    "leadership": [
+      "culture-building-botbonnie"
+    ],
+    "product_management": [
+      "culture-building-botbonnie"
+    ],
+    "crisis_management": [
+      "culture-building-botbonnie"
+    ],
+    "growth": [
+      "culture-building-botbonnie"
+    ],
+    "culture_building": [
+      "culture-building-botbonnie"
+    ]
+  },
+  "most_common": [
+    {
+      "competency": "leadership",
+      "story_count": 1
+    },
+    {
+      "competency": "product_management",
+      "story_count": 1
+    },
+    {
+      "competency": "crisis_management",
+      "story_count": 1
+    },
+    {
+      "competency": "growth",
+      "story_count": 1
+    },
+    {
+      "competency": "culture_building",
+      "story_count": 1
+    }
+  ]
+}
