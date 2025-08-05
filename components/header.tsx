@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { useTheme } from 'next-themes'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { ThemeToggle } from '@/components/theme-toggle'
 import Image from 'next/image'
 import lowPolyImage from '@/public/images/favicon/lowpoly.png'
@@ -9,8 +9,16 @@ import neonImage from '@/public/images/favicon/neon.png'
 
 export default function Header() {
   const { theme } = useTheme()
-  const headerImage = theme === 'dark' ? neonImage : lowPolyImage
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
+  
+  // Ensure component is mounted before using theme to avoid hydration mismatch
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+  
+  // Always use light theme image until mounted, then switch based on theme
+  const headerImage = mounted && theme === 'dark' ? neonImage : lowPolyImage
   
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)

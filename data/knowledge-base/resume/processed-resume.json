@@ -1,0 +1,361 @@
+{
+  "personalInfo": {
+    "name": "Roy Lo",
+    "location": "Bay Area (Stanford GSB)",
+    "email": "roylo@stanford.edu",
+    "phone": "+1 650 334 7692",
+    "linkedin": "linkedin.com/in/roylo0620",
+    "website": "roylo.fun",
+    "workAuthorization": "Eligible to work in the U.S. under F-1 OPT through July 2026; STEM background",
+    "languages": [
+      "Mandarin",
+      "English",
+      "Japanese (basic)"
+    ]
+  },
+  "workExperience": [
+    {
+      "company": "Appier Inc.",
+      "role": "Director → Senior Director of Product Management",
+      "department": "Product",
+      "location": "Taipei",
+      "startDate": "2021-06",
+      "endDate": "2024-05",
+      "duration": "2 years 11 months",
+      "responsibilities": [
+        "Owned $XX m P&L across 2 enterprise product lines",
+        "Managed 14-person cross-functional org: 5 PMs, designers, engineers",
+        "Conducted quarterly performance reviews for 10+ direct and cross-functional team members"
+      ],
+      "achievements": [
+        "Contributing XX% of company revenue",
+        "Expanded enterprise client base by XXX%",
+        "Penetrated Japan (10 clients), Korea (13), and SEA (5)",
+        "Driving 40%+ YoY recurring revenue growth",
+        "Launched LLM-powered 'copilot' feature in 2 weeks, achieving >50% client adoption",
+        "Recovered $XXX K in at-risk ARR within beta stage",
+        "Maintained 90% annual retention during leadership tenure"
+      ],
+      "metrics": [
+        "$XX m P&L",
+        "XX% revenue",
+        "XXX% client growth",
+        "40%+ YoY growth",
+        ">50% adoption",
+        "$XXX K ARR"
+      ],
+      "technologies": [
+        "LLM",
+        "AI",
+        "Instagram",
+        "WhatsApp",
+        "LINE",
+        "SMS",
+        "EDM",
+        "Web",
+        "App"
+      ],
+      "teamSize": "14-person cross-functional org",
+      "keyProjects": [
+        "LLM-powered copilot feature",
+        "AI automation across 3 product lines",
+        "Omnichannel marketing solutions"
+      ],
+      "competencies": [
+        "leadership",
+        "product_management",
+        "growth",
+        "technical",
+        "international"
+      ],
+      "impactLevel": "high",
+      "seniorityLevel": "executive"
+    },
+    {
+      "company": "BotBonnie",
+      "role": "Co-Founder & CEO",
+      "department": "Executive",
+      "location": "Taipei",
+      "startDate": "2016-10",
+      "endDate": "2021-06",
+      "duration": "4 years 8 months",
+      "responsibilities": [
+        "Led product, engineering, and GTM execution",
+        "Personally built and launched the MVP",
+        "Scaled team from 4 to 18 in 2 years"
+      ],
+      "achievements": [
+        "Bootstrapped to $X m ARR with 75% gross margin",
+        "XXX+ enterprise clients (Audi, Uniqlo, GSK)",
+        "Selected as Facebook F8 successful case study",
+        "Recognized by Google Business Messages with an Innovation Award",
+        "Maintained 90%+ annual employee retention",
+        "Scored 85/100 in company-wide leadership survey"
+      ],
+      "metrics": [
+        "$X m ARR",
+        "75% gross margin",
+        "XXX+ clients",
+        "90%+ retention",
+        "85/100 leadership score"
+      ],
+      "technologies": [
+        "Conversational AI",
+        "SaaS",
+        "Marketing automation"
+      ],
+      "teamSize": "18 people",
+      "keyProjects": [
+        "MVP development",
+        "Enterprise client acquisition",
+        "Culture building"
+      ],
+      "competencies": [
+        "leadership",
+        "product_management",
+        "innovation",
+        "growth",
+        "culture_building"
+      ],
+      "impactLevel": "high",
+      "seniorityLevel": "executive"
+    },
+    {
+      "company": "Fitribe",
+      "role": "Co-Founder & CEO",
+      "department": "Executive",
+      "location": "Taipei",
+      "startDate": "2015-12",
+      "endDate": "2016-10",
+      "duration": "10 months",
+      "responsibilities": [
+        "Built and launched MVP within 3 months",
+        "Conducted 30+ user interviews"
+      ],
+      "achievements": [
+        "Reached XXK MAU",
+        "Featured by App Store as a local creative app",
+        "Boosted user engagement by 50%"
+      ],
+      "metrics": [
+        "XXK MAU",
+        "50% engagement boost",
+        "30+ interviews"
+      ],
+      "technologies": [
+        "Mobile app",
+        "Gamification"
+      ],
+      "keyProjects": [
+        "MVP launch",
+        "Gamification mechanics",
+        "User research"
+      ],
+      "competencies": [
+        "product_management",
+        "innovation",
+        "user_experience_design"
+      ],
+      "impactLevel": "medium",
+      "seniorityLevel": "executive"
+    },
+    {
+      "company": "Darwin Venture Management",
+      "role": "Entrepreneur in Residence",
+      "department": "Investment",
+      "location": "Taipei",
+      "startDate": "2024-02",
+      "endDate": "2024-05",
+      "duration": "3 months",
+      "responsibilities": [
+        "Evaluated 10+ AI and MarTech startups",
+        "Advised on product-market fit, GTM, and platform strategies"
+      ],
+      "achievements": [],
+      "metrics": [
+        "10+ startups"
+      ],
+      "technologies": [
+        "AI",
+        "MarTech"
+      ],
+      "keyProjects": [
+        "Startup evaluation",
+        "Strategic advisory"
+      ],
+      "competencies": [
+        "strategic_thinking",
+        "market_analysis",
+        "mentorship"
+      ],
+      "impactLevel": "medium",
+      "seniorityLevel": "executive"
+    },
+    {
+      "company": "Yahoo! & IntoWow",
+      "role": "Senior Software Engineer & TPM",
+      "department": "Engineering",
+      "location": "Taipei",
+      "startDate": "2011-01",
+      "endDate": "2015-12",
+      "duration": "4 years 11 months",
+      "responsibilities": [
+        "Built iOS SDK serving 1M+ mobile video ads/day",
+        "Developed fraud detection system"
+      ],
+      "achievements": [
+        "Improving CTR by XX%",
+        "Reducing abuse by 95%",
+        "Co-authored a patent"
+      ],
+      "metrics": [
+        "1M+ ads/day",
+        "XX% CTR improvement",
+        "95% abuse reduction"
+      ],
+      "technologies": [
+        "iOS",
+        "SDK",
+        "Ad tech",
+        "Fraud detection"
+      ],
+      "keyProjects": [
+        "iOS SDK development",
+        "Fraud detection system",
+        "Patent"
+      ],
+      "competencies": [
+        "technical",
+        "data_analysis",
+        "innovation"
+      ],
+      "impactLevel": "medium",
+      "seniorityLevel": "senior"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Stanford Graduate School of Business",
+      "degree": "Master of Science in Management",
+      "field": "Sloan Fellow",
+      "location": "Palo Alto",
+      "startDate": "2024-07",
+      "endDate": "2025-06",
+      "honors": [
+        "Current Student"
+      ]
+    },
+    {
+      "institution": "National Yang Ming Chiao Tung University",
+      "degree": "M.S.",
+      "field": "Multimedia Engineering in Computer Science department",
+      "location": "Hsinchu, Taiwan",
+      "startDate": "2004-01",
+      "endDate": "2010-12",
+      "honors": [
+        "Valedictorian"
+      ]
+    },
+    {
+      "institution": "National Yang Ming Chiao Tung University",
+      "degree": "B.S.",
+      "field": "Computer Science",
+      "location": "Hsinchu, Taiwan",
+      "startDate": "2004-01",
+      "endDate": "2010-12",
+      "honors": [
+        "Dean's List"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "category": "Programming Languages",
+      "skills": [
+        "NodeJS",
+        "React"
+      ],
+      "proficiencyLevel": "advanced"
+    },
+    {
+      "category": "Cloud & Infrastructure",
+      "skills": [
+        "AWS"
+      ],
+      "proficiencyLevel": "intermediate"
+    },
+    {
+      "category": "Data & Analytics",
+      "skills": [
+        "SQL",
+        "R",
+        "Google Analytics"
+      ],
+      "proficiencyLevel": "intermediate"
+    },
+    {
+      "category": "Project Management",
+      "skills": [
+        "Jira"
+      ],
+      "proficiencyLevel": "advanced"
+    }
+  ],
+  "summary": {
+    "totalYearsExperience": 13,
+    "primaryExpertise": [
+      "Product Management",
+      "Leadership"
+    ],
+    "industryExperience": [
+      "AI",
+      "Marketing Technology",
+      "Software Engineering"
+    ],
+    "leadershipExperience": "Roy has extensive leadership experience, having served as Director and Senior Director for large product teams, as well as co-founding and scaling two startups. He has led teams ranging from 4 to 14 members across multiple organizations and maintained high employee retention rates.",
+    "technicalBackground": "Roy possesses a strong technical background with expertise in software development, particularly in iOS SDKs and AI technologies. He is proficient in programming languages like NodeJS and React. His experience in engineering roles has established a solid foundation for his subsequent product management career.",
+    "keyAchievements": [
+      "Contributed to XX% of company revenue at Appier Inc.",
+      "Successfully launched LLM-powered 'copilot' feature achieving >50% client adoption in 2 weeks.",
+      "Bootstrapped BotBonnie to $X million ARR with a 75% gross margin and a recognized case study by Facebook."
+    ]
+  },
+  "competencyProfile": {
+    "leadership": {
+      "strength": 9,
+      "examples": [
+        "Managed a 14-person cross-functional team at Appier Inc.",
+        "Scaled BotBonnie's team from 4 to 18 in 2 years."
+      ],
+      "evidenceType": "direct"
+    },
+    "product_management": {
+      "strength": 8,
+      "examples": [
+        "Led the development of key products including LLM-powered features at Appier.",
+        "Directed product and GTM execution as CEO of BotBonnie."
+      ],
+      "evidenceType": "direct"
+    },
+    "strategic_thinking": {
+      "strength": 8,
+      "examples": [
+        "Advised on product-market fit and GTM strategies for 10+ AI and MarTech startups.",
+        "Successfully expanded the client base into Japan, Korea, and SEA."
+      ],
+      "evidenceType": "derived"
+    },
+    "technical": {
+      "strength": 7,
+      "examples": [
+        "Developed fraud detection systems and built iOS SDK for mobile advertising at Yahoo!",
+        "Advanced proficiency in NodeJS, React, AWS, and data analytics tools."
+      ],
+      "evidenceType": "direct"
+    }
+  },
+  "metadata": {
+    "processedAt": "2025-08-05T04:36:41.656Z",
+    "version": "1.0.0"
+  }
+}
