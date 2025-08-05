@@ -209,11 +209,11 @@ export function Chatbot({ className }: ChatbotProps) {
       "fixed bottom-6 right-6 w-80 sm:w-96 md:w-[420px] lg:w-[480px] xl:w-[520px] h-[500px] sm:h-[600px] lg:h-[700px] flex flex-col shadow-2xl",
       className
     )}>
-      <CardHeader className="border-b py-3">
+      <CardHeader className="border-b py-2">
         <div className="flex items-center justify-between">
           <div>
-            <CardTitle className="text-lg">Roy&apos;s AI Assistant</CardTitle>
-            <div className="text-xs text-muted-foreground mt-0.5">
+            <CardTitle className="text-lg leading-tight">Roy&apos;s AI Assistant</CardTitle>
+            <div className="text-xs text-muted-foreground">
               Ask about Roy&apos;s experience & background
             </div>
           </div>
