@@ -1,88 +1,292 @@
 {
   "competencies": {
-    "leadership": 1,
-    "product_management": 1,
-    "crisis_management": 1,
-    "growth": 1,
-    "culture_building": 1,
-    "empathy": 1,
-    "communication": 1,
-    "strategic thinking": 1,
-    "collaboration": 1,
-    "innovation": 1
+    "leadership": 10,
+    "product_management": 13,
+    "innovation": 9,
+    "Communication": 1,
+    "Resource Management": 1,
+    "Decision Making": 1,
+    "Problem Solving": 1,
+    "crisis_management": 4,
+    "culture_building": 4,
+    "emotional_intelligence": 1,
+    "strategic_thinking": 1,
+    "adaptability": 2,
+    "team_building": 1,
+    "communication": 8,
+    "growth": 9,
+    "technical": 5,
+    "stakeholder management": 2,
+    "customer-centricity": 1,
+    "negotiation": 3,
+    "visionary thinking": 1,
+    "international": 2,
+    "empathy": 4,
+    "strategic thinking": 3,
+    "Data Analysis": 1,
+    "Market Research": 1,
+    "Stakeholder Management": 1,
+    "Negotiation": 1,
+    "Cross-Functional Collaboration": 1,
+    "relationship building": 1,
+    "data_analysis": 2,
+    "user_experience_design": 2,
+    "strategic_planning": 3,
+    "collaboration": 3,
+    "strategic planning": 2,
+    "cross-functional collaboration": 1,
+    "market analysis": 1,
+    "cultural adaptability": 1,
+    "mentorship": 1,
+    "relationship_management": 1,
+    "team_collaboration": 2,
+    "analytical thinking": 1,
+    "marketing_strategy": 1,
+    "employee_engagement": 1
   },
   "story_mapping": {
     "leadership": [
+      "2025-08-03-staying-focused-when-everything-feels-important",
+      "2025-08-03-the-cost-of-one-bad-hire-a-painful-lesson-in-team-building",
+      "2025-08-03-unifying-the-customer-journey-from-siloed-tools-to-seamless-platform",
+      "2025-08-04-balancing-principles-and-diplomacy-in-cross-regional-alignment",
+      "2025-08-04-betting-on-instagram-a-strategic-pivot-for-market-entry",
+      "2025-08-04-bridging-cultures-to-deliver-under-pressure",
+      "2025-08-04-from-engineer-to-enterprise-leader-the-journey-behind-botbonnie",
+      "2025-08-04-managing-risk-through-empathy-and-alignment",
+      "2025-08-04-turning-a-crisis-into-a-catalyst-for-product-growth",
       "culture-building-botbonnie"
     ],
     "product_management": [
-      "culture-building-botbonnie"
-    ],
-    "crisis_management": [
-      "culture-building-botbonnie"
-    ],
-    "growth": [
-      "culture-building-botbonnie"
-    ],
-    "culture_building": [
-      "culture-building-botbonnie"
-    ],
-    "empathy": [
-      "culture-building-botbonnie"
-    ],
-    "communication": [
-      "culture-building-botbonnie"
-    ],
-    "strategic thinking": [
-      "culture-building-botbonnie"
-    ],
-    "collaboration": [
+      "2025-08-03-staying-focused-when-everything-feels-important",
+      "2025-08-03-the-cost-of-one-bad-hire-a-painful-lesson-in-team-building",
+      "2025-08-03-unifying-the-customer-journey-from-siloed-tools-to-seamless-platform",
+      "2025-08-04-balancing-principles-and-diplomacy-in-cross-regional-alignment",
+      "2025-08-04-betting-on-instagram-a-strategic-pivot-for-market-entry",
+      "2025-08-04-bridging-cultures-to-deliver-under-pressure",
+      "2025-08-04-designing-for-the-aha-moment-in-onboarding",
+      "2025-08-04-from-engineer-to-enterprise-leader-the-journey-behind-botbonnie",
+      "2025-08-04-losing-audi-and-winning-them-back",
+      "2025-08-04-managing-risk-through-empathy-and-alignment",
+      "2025-08-04-turning-a-crisis-into-a-catalyst-for-product-growth",
+      "2025-08-04-turning-data-drop-off-into-delight-the-power-of-playful-incentives",
       "culture-building-botbonnie"
     ],
     "innovation": [
+      "2025-08-03-staying-focused-when-everything-feels-important",
+      "2025-08-03-unifying-the-customer-journey-from-siloed-tools-to-seamless-platform",
+      "2025-08-04-betting-on-instagram-a-strategic-pivot-for-market-entry",
+      "2025-08-04-bridging-cultures-to-deliver-under-pressure",
+      "2025-08-04-from-engineer-to-enterprise-leader-the-journey-behind-botbonnie",
+      "2025-08-04-losing-audi-and-winning-them-back",
+      "2025-08-04-turning-a-crisis-into-a-catalyst-for-product-growth",
+      "2025-08-04-turning-data-drop-off-into-delight-the-power-of-playful-incentives",
+      "culture-building-botbonnie"
+    ],
+    "Communication": [
+      "2025-08-03-staying-focused-when-everything-feels-important"
+    ],
+    "Resource Management": [
+      "2025-08-03-staying-focused-when-everything-feels-important"
+    ],
+    "Decision Making": [
+      "2025-08-03-staying-focused-when-everything-feels-important"
+    ],
+    "Problem Solving": [
+      "2025-08-03-staying-focused-when-everything-feels-important"
+    ],
+    "crisis_management": [
+      "2025-08-03-the-cost-of-one-bad-hire-a-painful-lesson-in-team-building",
+      "2025-08-03-unifying-the-customer-journey-from-siloed-tools-to-seamless-platform",
+      "2025-08-04-bridging-cultures-to-deliver-under-pressure",
+      "culture-building-botbonnie"
+    ],
+    "culture_building": [
+      "2025-08-03-the-cost-of-one-bad-hire-a-painful-lesson-in-team-building",
+      "2025-08-04-designing-for-the-aha-moment-in-onboarding",
+      "2025-08-04-managing-risk-through-empathy-and-alignment",
+      "culture-building-botbonnie"
+    ],
+    "emotional_intelligence": [
+      "2025-08-03-the-cost-of-one-bad-hire-a-painful-lesson-in-team-building"
+    ],
+    "strategic_thinking": [
+      "2025-08-03-the-cost-of-one-bad-hire-a-painful-lesson-in-team-building"
+    ],
+    "adaptability": [
+      "2025-08-03-the-cost-of-one-bad-hire-a-painful-lesson-in-team-building",
+      "2025-08-04-managing-risk-through-empathy-and-alignment"
+    ],
+    "team_building": [
+      "2025-08-03-the-cost-of-one-bad-hire-a-painful-lesson-in-team-building"
+    ],
+    "communication": [
+      "2025-08-03-the-cost-of-one-bad-hire-a-painful-lesson-in-team-building",
+      "2025-08-03-unifying-the-customer-journey-from-siloed-tools-to-seamless-platform",
+      "2025-08-04-balancing-principles-and-diplomacy-in-cross-regional-alignment",
+      "2025-08-04-bridging-cultures-to-deliver-under-pressure",
+      "2025-08-04-losing-audi-and-winning-them-back",
+      "2025-08-04-managing-risk-through-empathy-and-alignment",
+      "2025-08-04-turning-a-crisis-into-a-catalyst-for-product-growth",
+      "culture-building-botbonnie"
+    ],
+    "growth": [
+      "2025-08-03-unifying-the-customer-journey-from-siloed-tools-to-seamless-platform",
+      "2025-08-04-betting-on-instagram-a-strategic-pivot-for-market-entry",
+      "2025-08-04-bridging-cultures-to-deliver-under-pressure",
+      "2025-08-04-designing-for-the-aha-moment-in-onboarding",
+      "2025-08-04-from-engineer-to-enterprise-leader-the-journey-behind-botbonnie",
+      "2025-08-04-managing-risk-through-empathy-and-alignment",
+      "2025-08-04-turning-a-crisis-into-a-catalyst-for-product-growth",
+      "2025-08-04-turning-data-drop-off-into-delight-the-power-of-playful-incentives",
+      "culture-building-botbonnie"
+    ],
+    "technical": [
+      "2025-08-03-unifying-the-customer-journey-from-siloed-tools-to-seamless-platform",
+      "2025-08-04-betting-on-instagram-a-strategic-pivot-for-market-entry",
+      "2025-08-04-bridging-cultures-to-deliver-under-pressure",
+      "2025-08-04-designing-for-the-aha-moment-in-onboarding",
+      "2025-08-04-turning-a-crisis-into-a-catalyst-for-product-growth"
+    ],
+    "stakeholder management": [
+      "2025-08-03-unifying-the-customer-journey-from-siloed-tools-to-seamless-platform",
+      "2025-08-04-managing-risk-through-empathy-and-alignment"
+    ],
+    "customer-centricity": [
+      "2025-08-03-unifying-the-customer-journey-from-siloed-tools-to-seamless-platform"
+    ],
+    "negotiation": [
+      "2025-08-03-unifying-the-customer-journey-from-siloed-tools-to-seamless-platform",
+      "2025-08-04-balancing-principles-and-diplomacy-in-cross-regional-alignment",
+      "2025-08-04-bridging-cultures-to-deliver-under-pressure"
+    ],
+    "visionary thinking": [
+      "2025-08-03-unifying-the-customer-journey-from-siloed-tools-to-seamless-platform"
+    ],
+    "international": [
+      "2025-08-04-balancing-principles-and-diplomacy-in-cross-regional-alignment",
+      "2025-08-04-from-engineer-to-enterprise-leader-the-journey-behind-botbonnie"
+    ],
+    "empathy": [
+      "2025-08-04-balancing-principles-and-diplomacy-in-cross-regional-alignment",
+      "2025-08-04-bridging-cultures-to-deliver-under-pressure",
+      "2025-08-04-managing-risk-through-empathy-and-alignment",
+      "2025-08-04-turning-a-crisis-into-a-catalyst-for-product-growth"
+    ],
+    "strategic thinking": [
+      "2025-08-04-balancing-principles-and-diplomacy-in-cross-regional-alignment",
+      "2025-08-04-bridging-cultures-to-deliver-under-pressure",
+      "2025-08-04-managing-risk-through-empathy-and-alignment"
+    ],
+    "Data Analysis": [
+      "2025-08-04-betting-on-instagram-a-strategic-pivot-for-market-entry"
+    ],
+    "Market Research": [
+      "2025-08-04-betting-on-instagram-a-strategic-pivot-for-market-entry"
+    ],
+    "Stakeholder Management": [
+      "2025-08-04-betting-on-instagram-a-strategic-pivot-for-market-entry"
+    ],
+    "Negotiation": [
+      "2025-08-04-betting-on-instagram-a-strategic-pivot-for-market-entry"
+    ],
+    "Cross-Functional Collaboration": [
+      "2025-08-04-betting-on-instagram-a-strategic-pivot-for-market-entry"
+    ],
+    "relationship building": [
+      "2025-08-04-bridging-cultures-to-deliver-under-pressure"
+    ],
+    "data_analysis": [
+      "2025-08-04-designing-for-the-aha-moment-in-onboarding",
+      "2025-08-04-turning-data-drop-off-into-delight-the-power-of-playful-incentives"
+    ],
+    "user_experience_design": [
+      "2025-08-04-designing-for-the-aha-moment-in-onboarding",
+      "2025-08-04-turning-data-drop-off-into-delight-the-power-of-playful-incentives"
+    ],
+    "strategic_planning": [
+      "2025-08-04-designing-for-the-aha-moment-in-onboarding",
+      "2025-08-04-losing-audi-and-winning-them-back",
+      "culture-building-botbonnie"
+    ],
+    "collaboration": [
+      "2025-08-04-designing-for-the-aha-moment-in-onboarding",
+      "2025-08-04-turning-a-crisis-into-a-catalyst-for-product-growth",
+      "culture-building-botbonnie"
+    ],
+    "strategic planning": [
+      "2025-08-04-from-engineer-to-enterprise-leader-the-journey-behind-botbonnie",
+      "2025-08-04-turning-a-crisis-into-a-catalyst-for-product-growth"
+    ],
+    "cross-functional collaboration": [
+      "2025-08-04-from-engineer-to-enterprise-leader-the-journey-behind-botbonnie"
+    ],
+    "market analysis": [
+      "2025-08-04-from-engineer-to-enterprise-leader-the-journey-behind-botbonnie"
+    ],
+    "cultural adaptability": [
+      "2025-08-04-from-engineer-to-enterprise-leader-the-journey-behind-botbonnie"
+    ],
+    "mentorship": [
+      "2025-08-04-from-engineer-to-enterprise-leader-the-journey-behind-botbonnie"
+    ],
+    "relationship_management": [
+      "2025-08-04-losing-audi-and-winning-them-back"
+    ],
+    "team_collaboration": [
+      "2025-08-04-losing-audi-and-winning-them-back",
+      "2025-08-04-turning-data-drop-off-into-delight-the-power-of-playful-incentives"
+    ],
+    "analytical thinking": [
+      "2025-08-04-turning-a-crisis-into-a-catalyst-for-product-growth"
+    ],
+    "marketing_strategy": [
+      "2025-08-04-turning-data-drop-off-into-delight-the-power-of-playful-incentives"
+    ],
+    "employee_engagement": [
       "culture-building-botbonnie"
     ]
   },
   "most_common": [
     {
-      "competency": "leadership",
-      "story_count": 1
-    },
-    {
       "competency": "product_management",
-      "story_count": 1
+      "story_count": 13
     },
     {
-      "competency": "crisis_management",
-      "story_count": 1
-    },
-    {
-      "competency": "growth",
-      "story_count": 1
-    },
-    {
-      "competency": "culture_building",
-      "story_count": 1
-    },
-    {
-      "competency": "empathy",
-      "story_count": 1
-    },
-    {
-      "competency": "communication",
-      "story_count": 1
-    },
-    {
-      "competency": "strategic thinking",
-      "story_count": 1
-    },
-    {
-      "competency": "collaboration",
-      "story_count": 1
+      "competency": "leadership",
+      "story_count": 10
     },
     {
       "competency": "innovation",
-      "story_count": 1
+      "story_count": 9
+    },
+    {
+      "competency": "growth",
+      "story_count": 9
+    },
+    {
+      "competency": "communication",
+      "story_count": 8
+    },
+    {
+      "competency": "technical",
+      "story_count": 5
+    },
+    {
+      "competency": "crisis_management",
+      "story_count": 4
+    },
+    {
+      "competency": "culture_building",
+      "story_count": 4
+    },
+    {
+      "competency": "empathy",
+      "story_count": 4
+    },
+    {
+      "competency": "negotiation",
+      "story_count": 3
     }
   ]
 }

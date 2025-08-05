@@ -7,6 +7,7 @@ import './globals.css'
 import Providers from '@/components/providers'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
+import { ChatbotWrapper } from '@/components/chatbot'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 const playfair = Playfair_Display({
@@ -32,11 +33,13 @@ export default function RootLayout({
           inter.variable,
           playfair.variable
         )}
+        suppressHydrationWarning
       >
         <Providers>
           <Header />
           <main className='grow'>{children}</main>
           <Footer />
+          <ChatbotWrapper />
         </Providers>
       </body>
     </html>

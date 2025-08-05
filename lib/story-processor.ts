@@ -8,7 +8,7 @@ export interface ProcessedStory {
   summary: string;
   company: string;
   role: string;
-  timeframe: string;
+  timeframe: string | number[];
   
   // Extracted metadata
   competencies: string[];
@@ -30,6 +30,12 @@ export interface STARStructure {
   task: string;
   actions: string[];
   results: string[];
+}
+
+interface AIEnhancedStoryData {
+  additionalCompetencies?: string[];
+  interviewCategories?: string[];
+  questionTypes?: string[];
 }
 
 export class StoryProcessor {
@@ -61,14 +67,14 @@ export class StoryProcessor {
     return this.combineAndValidate(content, frontmatter, ruleBasedData, aiEnhancedData, filePath);
   }
 
-  private extractRuleBased(content: string, frontmatter: any) {
+  private extractRuleBased(content: string, frontmatter: Record<string, unknown>) {
     return {
       competencies: this.extractCompetencies(content),
       metrics: this.extractMetrics(content),
       keywords: this.extractKeywords(content),
       starStructure: this.identifySTARStructure(content),
       impactLevel: this.assessImpactLevel(content),
-      seniorityLevel: this.determineSeniorityLevel(frontmatter.role, content)
+      seniorityLevel: this.determineSeniorityLevel(frontmatter.role as string, content)
     };
   }
 
@@ -364,8 +370,8 @@ export class StoryProcessor {
 
   private async enhanceWithAI(
     content: string, 
-    frontmatter: any, 
-    ruleBasedData: any
+    frontmatter: Record<string, unknown>, 
+    ruleBasedData: Record<string, unknown>
   ): Promise<Partial<ProcessedStory>> {
     // If OpenAI is not available, return empty enhancement
     if (!this.openai) {
@@ -412,9 +418,9 @@ Focus on behavioral interview applications and keep responses concise.
 
   private combineAndValidate(
     content: string,
-    frontmatter: any,
-    ruleBasedData: any, 
-    aiEnhancedData: any,
+    frontmatter: Record<string, unknown>,
+    ruleBasedData: Record<string, unknown>, 
+    aiEnhancedData: Record<string, unknown>,
     filePath: string
   ): ProcessedStory {
     // Generate slug from file path
@@ -422,24 +428,24 @@ Focus on behavioral interview applications and keep responses concise.
     
     return {
       // Original metadata
-      title: frontmatter.title,
-      summary: frontmatter.summary,
-      company: frontmatter.company,
-      role: frontmatter.role,
-      timeframe: frontmatter.timeframe || 'Unknown',
+      title: frontmatter.title as string,
+      summary: frontmatter.summary as string,
+      company: frontmatter.company as string,
+      role: frontmatter.role as string,
+      timeframe: frontmatter.timeframe as string | number[] || 'Unknown',
       
       // Combined extracted data
       competencies: [...new Set([
-        ...ruleBasedData.competencies,
-        ...(aiEnhancedData.additionalCompetencies || [])
+        ...(ruleBasedData.competencies as string[]),
+        ...((aiEnhancedData as AIEnhancedStoryData).additionalCompetencies || [])
       ])],
-      interviewCategories: aiEnhancedData.interviewCategories || this.generateDefaultInterviewCategories(ruleBasedData.competencies),
-      questionTypes: aiEnhancedData.questionTypes || this.generateDefaultQuestionTypes(ruleBasedData.competencies),
-      metrics: ruleBasedData.metrics,
-      keywords: ruleBasedData.keywords,
-      starStructure: ruleBasedData.starStructure,
-      impactLevel: ruleBasedData.impactLevel,
-      seniorityLevel: ruleBasedData.seniorityLevel,
+      interviewCategories: (aiEnhancedData as AIEnhancedStoryData).interviewCategories || this.generateDefaultInterviewCategories(ruleBasedData.competencies as string[]),
+      questionTypes: (aiEnhancedData as AIEnhancedStoryData).questionTypes || this.generateDefaultQuestionTypes(ruleBasedData.competencies as string[]),
+      metrics: ruleBasedData.metrics as string[],
+      keywords: ruleBasedData.keywords as string[],
+      starStructure: ruleBasedData.starStructure as STARStructure,
+      impactLevel: ruleBasedData.impactLevel as 'low' | 'medium' | 'high',
+      seniorityLevel: ruleBasedData.seniorityLevel as 'junior' | 'mid' | 'senior' | 'executive',
       
       // Content
       content,

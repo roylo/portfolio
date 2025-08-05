@@ -1,5 +1,3 @@
-#!/usr/bin/env tsx
-
 import dotenv from 'dotenv';
 import fs from 'fs';
 import path from 'path';
@@ -254,7 +252,9 @@ function getUniqueCompanies(stories: ProcessedStory[]): string[] {
 }
 
 function getTimeframes(stories: ProcessedStory[]): string[] {
-  return [...new Set(stories.map(story => story.timeframe))].sort();
+  return [...new Set(stories.map(story => 
+    Array.isArray(story.timeframe) ? story.timeframe.join('-') : story.timeframe
+  ))].sort();
 }
 
 function getSeniorityLevels(stories: ProcessedStory[]): Record<string, number> {

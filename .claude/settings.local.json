@@ -5,7 +5,11 @@
       "Bash(pnpm add:*)",
       "Bash(git checkout:*)",
       "Bash(npm run process-stories:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(npm run lint)",
+      "Bash(npm run build:*)",
+      "Bash(rm:*)",
+      "Bash(npm run dev:*)"
     ],
     "deny": []
   }
