@@ -13,7 +13,9 @@
     "build-knowledge": "npm run process-stories && npm run process-resume",
     "populate-vector-store": "tsx scripts/populate-supabase-vector-store.ts",
     "build-knowledge-full": "npm run build-knowledge && npm run populate-vector-store",
-    "vector:setup": "npm run populate-vector-store"
+    "vector:setup": "npm run populate-vector-store",
+    "test-streaming": "tsx scripts/test-streaming.ts",
+    "test-thinking": "tsx scripts/test-thinking-indicator.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.1.1",
