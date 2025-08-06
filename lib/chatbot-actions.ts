@@ -3,12 +3,27 @@
 import OpenAI from 'openai';
 import { v4 as uuidv4 } from 'uuid';
 import { ResumeDataAccess } from './resume-utils';
-import { StoryDataAccess } from './story-utils';
+import { HybridStorySearch } from './hybrid-story-search';
 import type { Message } from '@/components/chatbot';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
+
+// Initialize hybrid search with fallback
+let hybridSearch: HybridStorySearch | null = null;
+
+async function getHybridSearch(): Promise<HybridStorySearch> {
+  if (!hybridSearch) {
+    hybridSearch = new HybridStorySearch();
+    try {
+      await hybridSearch.initialize();
+    } catch (error) {
+      console.warn('Failed to initialize vector search, using keyword fallback:', error);
+    }
+  }
+  return hybridSearch;
+}
 
 export interface JDAnalysisResult {
   overallMatch: number; // 0-100
@@ -34,7 +49,7 @@ export interface JDAnalysisResult {
 
 export async function analyzeJobDescription(jobDescription: string): Promise<JDAnalysisResult> {
   const resumeAccess = new ResumeDataAccess();
-  const storyAccess = new StoryDataAccess();
+  const hybridSearchInstance = await getHybridSearch();
   
   // Get relevant data
   const resume = resumeAccess.getFullResume();
@@ -45,8 +60,17 @@ export async function analyzeJobDescription(jobDescription: string): Promise<JDA
     throw new Error('Resume data not available');
   }
 
-  // Enhanced AI analysis with comprehensive context
-  const relevantStoriesForJD = storyAccess.findRelevantStories(jobDescription, 5);
+  // Enhanced AI analysis with semantic story search
+  const searchResults = await hybridSearchInstance.searchStories(
+    `job description requirements: ${jobDescription}`, 
+    { 
+      limit: 5,
+      vectorWeight: 0.8, // Prioritize semantic similarity for JD matching
+      keywordWeight: 0.2
+    }
+  );
+  
+  const relevantStoriesForJD = searchResults.map(result => result.story);
   
   const analysisPrompt = `You are an expert talent analyst. Provide a comprehensive job-candidate fit analysis for Roy Lo against this job description.
 
@@ -115,12 +139,10 @@ Provide a JSON response:
 
     const analysis = JSON.parse(response.choices[0].message.content || '{}');
     
-    // Enhance with story suggestions
-    const relevantStories = storyAccess.findRelevantStories(jobDescription, 3);
-    
+    // Enhance with story suggestions from search results
     return {
       ...analysis,
-      suggestedStories: relevantStories.map(story => story.slug)
+      suggestedStories: relevantStoriesForJD.map(story => story.slug)
     };
   } catch (error) {
     console.error('JD analysis failed:', error);
@@ -160,11 +182,21 @@ export async function answerBehavioralQuestion(question: string): Promise<{
   }[];
   confidence: number;
 }> {
-  const storyAccess = new StoryDataAccess();
+  const hybridSearchInstance = await getHybridSearch();
   const resumeAccess = new ResumeDataAccess();
   
-  // Find relevant stories for the question
-  const relevantStories = storyAccess.findRelevantStories(question, 2);
+  // Find relevant stories using hybrid search for better semantic matching
+  const searchResults = await hybridSearchInstance.searchStories(
+    `behavioral interview question: ${question}`,
+    {
+      limit: 3,
+      vectorWeight: 0.9, // High priority on semantic similarity for behavioral questions
+      keywordWeight: 0.1,
+      diversityBoost: true // Ensure diverse story selection
+    }
+  );
+  
+  const relevantStories = searchResults.map(result => result.story);
   
   if (relevantStories.length === 0) {
     return {
@@ -428,10 +460,19 @@ export async function processChatMessage(message: string): Promise<Message> {
   
   // Get comprehensive background data for better responses
   const resumeAccess = new ResumeDataAccess();
-  const storyAccess = new StoryDataAccess();
+  const hybridSearchInstance = await getHybridSearch();
   
   const resume = resumeAccess.getFullResume();
-  const relevantStories = storyAccess.findRelevantStories(message, 3);
+  
+  // Use hybrid search for better story relevance
+  const searchResults = await hybridSearchInstance.searchStories(message, {
+    limit: 3,
+    vectorWeight: 0.6, // Balanced approach for general questions
+    keywordWeight: 0.4,
+    diversityBoost: true
+  });
+  
+  const relevantStories = searchResults.map(result => result.story);
   
   if (!resume) {
     return {
