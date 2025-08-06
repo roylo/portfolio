@@ -147,41 +147,78 @@ export class HybridStorySearch {
 
   /**
    * Apply diversity boost to avoid clustering similar stories
+   * Uses progressive penalties and multiple diversity factors
    */
   private applyDiversityBoost(results: HybridSearchResult[]): HybridSearchResult[] {
     const companyCounts = new Map<string, number>();
     const competencyCounts = new Map<string, number>();
+    const impactCounts = new Map<string, number>();
+    const titleSimilarity = new Map<string, Set<string>>();
 
-    return results.map(result => {
+    // Track seen stories to avoid exact duplicates
+    const seenStories = new Set<string>();
+    const diverseResults: HybridSearchResult[] = [];
+
+    results.forEach(result => {
+      // Skip exact duplicates
+      if (seenStories.has(result.story.slug)) {
+        return;
+      }
+      seenStories.add(result.story.slug);
+
       const company = result.story.company;
       const primaryCompetency = result.story.competencies[0];
+      const impactLevel = result.story.impactLevel;
 
-      // Count occurrences
+      // Count occurrences for diversity tracking
       companyCounts.set(company, (companyCounts.get(company) || 0) + 1);
+      impactCounts.set(impactLevel, (impactCounts.get(impactLevel) || 0) + 1);
       if (primaryCompetency) {
         competencyCounts.set(primaryCompetency, (competencyCounts.get(primaryCompetency) || 0) + 1);
       }
 
-      // Apply diversity penalty for over-represented companies/competencies
-      let diversityPenalty = 1.0;
+      // Calculate progressive diversity penalties
+      let diversityMultiplier = 1.0;
       
+      // Company diversity - stronger penalties for clustering
       const companyCount = companyCounts.get(company) || 1;
-      if (companyCount > 2) {
-        diversityPenalty *= 0.9; // Reduce score by 10% for over-representation
+      if (companyCount > 1) {
+        diversityMultiplier *= Math.max(0.4, 1 - (companyCount - 1) * 0.3); // 70%, 40%, 10%
       }
 
+      // Competency diversity
       if (primaryCompetency) {
         const competencyCount = competencyCounts.get(primaryCompetency) || 1;
-        if (competencyCount > 2) {
-          diversityPenalty *= 0.9;
+        if (competencyCount > 1) {
+          diversityMultiplier *= Math.max(0.6, 1 - (competencyCount - 1) * 0.2); // 80%, 60%, 40%
         }
       }
 
-      return {
+      // Impact level diversity - encourage mix of high/medium impact
+      const impactCount = impactCounts.get(impactLevel) || 1;
+      if (impactLevel === 'high' && impactCount > 2) {
+        diversityMultiplier *= 0.8; // Slight penalty for too many high-impact stories
+      }
+
+      // Title similarity check (simple word overlap)
+      const currentWords = new Set(result.story.title.toLowerCase().split(' '));
+      let similarityPenalty = 1.0;
+      for (const existingWords of titleSimilarity.values()) {
+        const overlap = [...currentWords].filter(word => existingWords.has(word)).length;
+        const similarity = overlap / Math.min(currentWords.size, existingWords.size);
+        if (similarity > 0.4) {
+          similarityPenalty *= 0.85; // Penalize similar titles
+        }
+      }
+      titleSimilarity.set(result.story.slug, currentWords);
+
+      diverseResults.push({
         ...result,
-        relevanceScore: result.relevanceScore * diversityPenalty
-      };
+        relevanceScore: result.relevanceScore * diversityMultiplier * similarityPenalty
+      });
     });
+
+    return diverseResults;
   }
 
   /**

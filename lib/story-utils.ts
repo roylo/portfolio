@@ -132,11 +132,12 @@ export class StoryDataAccess {
       }
     });
 
-    // Sort by score and impact level
+    // Sort by score with reduced impact bias to encourage diversity
     scoredStories.sort((a, b) => {
-      const impactWeight = { high: 3, medium: 2, low: 1 };
-      const scoreA = a.score + (impactWeight[a.story.impactLevel] || 1);
-      const scoreB = b.score + (impactWeight[b.story.impactLevel] || 1);
+      // Reduced impact weighting to allow more variety
+      const impactWeight = { high: 1.5, medium: 1.2, low: 1.0 };
+      const scoreA = a.score * (impactWeight[a.story.impactLevel] || 1);
+      const scoreB = b.score * (impactWeight[b.story.impactLevel] || 1);
       return scoreB - scoreA;
     });
 

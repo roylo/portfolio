@@ -5,10 +5,69 @@ import { v4 as uuidv4 } from 'uuid';
 import { ResumeDataAccess } from './resume-utils';
 import { HybridStorySearch } from './hybrid-story-search';
 import type { Message } from '@/components/chatbot';
+import type { CarouselCardData } from '@/components/ui/carousel-cards';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
+
+/**
+ * Select diverse stories to avoid repetition using advanced selection algorithm
+ */
+function selectDiverseStories(stories: import('./story-processor').ProcessedStory[], limit: number): import('./story-processor').ProcessedStory[] {
+  if (stories.length <= limit) return stories;
+
+  const selected: import('./story-processor').ProcessedStory[] = [];
+  const remaining = [...stories];
+
+  // Always include the highest relevance story first
+  selected.push(remaining.shift()!);
+
+  // Select remaining stories using diversity scoring
+  while (selected.length < limit && remaining.length > 0) {
+    let bestIndex = 0;
+    let bestDiversityScore = -1;
+
+    remaining.forEach((candidate, index) => {
+      let diversityScore = 0;
+
+      // Check diversity against already selected stories
+      selected.forEach(selectedStory => {
+        // Company diversity bonus
+        if (candidate.company !== selectedStory.company) {
+          diversityScore += 3;
+        }
+
+        // Competency diversity bonus
+        const sharedCompetencies = candidate.competencies.filter(c => 
+          selectedStory.competencies.includes(c)
+        ).length;
+        diversityScore += Math.max(0, 5 - sharedCompetencies);
+
+        // Impact diversity bonus
+        if (candidate.impactLevel !== selectedStory.impactLevel) {
+          diversityScore += 2;
+        }
+
+        // Title similarity penalty
+        const candidateWords = new Set(candidate.title.toLowerCase().split(' '));
+        const selectedWords = new Set(selectedStory.title.toLowerCase().split(' '));
+        const commonWords = [...candidateWords].filter(word => selectedWords.has(word)).length;
+        const similarity = commonWords / Math.min(candidateWords.size, selectedWords.size);
+        diversityScore -= similarity * 3;
+      });
+
+      if (diversityScore > bestDiversityScore) {
+        bestDiversityScore = diversityScore;
+        bestIndex = index;
+      }
+    });
+
+    selected.push(remaining.splice(bestIndex, 1)[0]);
+  }
+
+  return selected;
+}
 
 // Initialize hybrid search with fallback
 let hybridSearch: HybridStorySearch | null = null;
@@ -181,6 +240,7 @@ export async function answerBehavioralQuestion(question: string): Promise<{
     relevance: string;
   }[];
   confidence: number;
+  fullStories?: import('./story-processor').ProcessedStory[];
 }> {
   const hybridSearchInstance = await getHybridSearch();
   const resumeAccess = new ResumeDataAccess();
@@ -189,20 +249,34 @@ export async function answerBehavioralQuestion(question: string): Promise<{
   const searchResults = await hybridSearchInstance.searchStories(
     `behavioral interview question: ${question}`,
     {
-      limit: 3,
-      vectorWeight: 0.9, // High priority on semantic similarity for behavioral questions
-      keywordWeight: 0.1,
+      limit: 5, // Get more candidates for better diversity selection
+      vectorWeight: 0.7, // Balanced approach - less dominant vector search
+      keywordWeight: 0.3, // More keyword influence for varied matches
       diversityBoost: true // Ensure diverse story selection
     }
   );
   
-  const relevantStories = searchResults.map(result => result.story);
+  // Select the most diverse 3 stories from the 5 candidates
+  const allCandidates = searchResults.map(result => result.story);
+  console.log(`📚 Story Selection - Found ${allCandidates.length} candidates:`);
+  allCandidates.forEach((story, i) => {
+    console.log(`  ${i+1}. "${story.title}" (${story.company}) - Impact: ${story.impactLevel}`);
+  });
+  
+  const selectedStories = selectDiverseStories(allCandidates, 3);
+  console.log(`🎯 Selected ${selectedStories.length} diverse stories:`);
+  selectedStories.forEach((story, i) => {
+    console.log(`  ${i+1}. "${story.title}" (${story.company}) - Impact: ${story.impactLevel}`);
+  });
+  
+  const relevantStories = selectedStories;
   
   if (relevantStories.length === 0) {
     return {
-      answer: "I don't have a specific story that directly addresses this question, but Roy's background shows strong experience in leadership, product management, and innovation.",
+      answer: "I don't have a specific story that directly addresses this question, but my background shows strong experience in leadership, product management, and innovation. I'd be happy to discuss this further in more detail.",
       relevantStories: [],
-      confidence: 20
+      confidence: 20,
+      fullStories: []
     };
   }
 
@@ -275,7 +349,8 @@ Provide a JSON response:
         slug: story.slug,
         relevance: `This story demonstrates ${story.competencies.slice(0, 3).join(', ')}`
       })),
-      confidence: result.confidence || 75
+      confidence: result.confidence || 75,
+      fullStories: relevantStories
     };
   } catch (error) {
     console.error('Behavioral question answering failed:', error);
@@ -290,7 +365,8 @@ Provide a JSON response:
         slug: story.slug,
         relevance: `Relevant experience in ${story.competencies.join(', ')}`
       })),
-      confidence: 60
+      confidence: 60,
+      fullStories: relevantStories
     };
   }
 }
@@ -427,18 +503,33 @@ export async function processChatMessage(message: string): Promise<Message> {
     
     return {
       id: uuidv4(),
-      content: `${answer.answer}${answer.relevantStories.length > 0 ? 
-        `\n\n### 📚 Related Stories\n${answer.relevantStories.map(story => 
-          `**${story.title}** (${story.relevance})\n*${story.summary}*`
-        ).join('\n\n')}` : ''
-      }`,
+      content: answer.answer,
       role: 'assistant',
       timestamp: new Date(),
       type: 'behavioral-question',
       metadata: {
         relevanceScore: answer.confidence,
         suggestedStories: answer.relevantStories.map(s => s.slug)
-      }
+      },
+      carouselCards: answer.relevantStories.length > 0 ? {
+        title: "Related Stories",
+        cards: answer.relevantStories.map(story => {
+          // Get the full story data to extract rich metadata
+          const storyData = answer.fullStories?.find(s => s.slug === story.slug);
+          return {
+            id: story.slug,
+            title: story.title,
+            description: story.summary,
+            details: story.relevance,
+            metadata: {
+              company: storyData?.company || (story.title.includes('at ') ? story.title.split('at ').pop()?.trim() : undefined),
+              role: storyData?.role,
+              impact: storyData?.impactLevel,
+              competencies: storyData?.competencies.slice(0, 3) || [] // Show top 3 competencies
+            }
+          } as CarouselCardData;
+        })
+      } : undefined
     };
   }
   
@@ -477,7 +568,7 @@ export async function processChatMessage(message: string): Promise<Message> {
   if (!resume) {
     return {
       id: uuidv4(),
-      content: "I don't have access to Roy's complete background information right now. Please try again later.",
+      content: "I don't have access to my complete background information right now. Please try again later.",
       role: 'assistant',
       timestamp: new Date(),
       type: 'text'
@@ -485,7 +576,7 @@ export async function processChatMessage(message: string): Promise<Message> {
   }
 
   // Enhanced general conversation with rich context
-  const generalPrompt = `You are Roy Lo's AI assistant representing him in conversations. Answer this question using his comprehensive background and experiences.
+  const generalPrompt = `You are Roy Lo's digital twin. Answer this question as Roy himself using his comprehensive background and experiences.
 
 QUESTION: ${message}
 
