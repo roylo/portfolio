@@ -9,7 +9,18 @@
       "Bash(npm run lint)",
       "Bash(npm run build:*)",
       "Bash(rm:*)",
-      "Bash(npm run dev:*)"
+      "Bash(npm run dev:*)",
+      "Bash(ls:*)",
+      "Bash(git commit:*)",
+      "Bash(git merge:*)",
+      "Bash(git push:*)",
+      "Bash(git tag:*)",
+      "Bash(git branch:*)",
+      "Bash(./scripts/manage-chromadb.sh:*)",
+      "Bash(npm run chromadb:start:*)",
+      "Bash(curl:*)",
+      "Bash(npx tsx:*)",
+      "Bash(pnpm install:*)"
     ],
     "deny": []
   }

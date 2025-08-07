@@ -1,5 +1,5 @@
 ---
-  title: Can you be my frined?
+  title: Can you be my friend?
   summary: Today, during shower time with my daughter Abby, I had a heartwarming conversation that left me both amazed and inspired.
   author: 'Roy Lo'
   publishedAt: '2025-01-21'

@@ -2,6 +2,8 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+After reading prompt by the user, think hard before you take actions, and layout the options to ask user if you're not sure.
+
 ## Development Commands
 
 - **Development server**: `npm run dev` (uses Next.js with Turbopack for faster builds)

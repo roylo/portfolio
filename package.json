@@ -1,20 +1,27 @@
 {
   "name": "portfolio",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "clean": "rm -rf .next node_modules/.cache",
     "process-stories": "tsx scripts/process-stories.ts",
     "process-resume": "tsx scripts/process-resume.ts",
-    "build-knowledge": "npm run process-stories && npm run process-resume"
+    "build-knowledge": "npm run process-stories && npm run process-resume",
+    "populate-vector-store": "tsx scripts/populate-supabase-vector-store.ts",
+    "build-knowledge-full": "npm run build-knowledge && npm run populate-vector-store",
+    "vector:setup": "npm run populate-vector-store",
+    "test-streaming": "tsx scripts/test-streaming.ts",
+    "test-thinking": "tsx scripts/test-thinking-indicator.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.1.1",
     "@radix-ui/react-icons": "^1.3.2",
     "@radix-ui/react-slot": "^1.2.3",
+    "@supabase/supabase-js": "^2.53.0",
     "@types/uuid": "^10.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
