@@ -1,7 +1,10 @@
+'use client';
+
 import Image from 'next/image'
 import authorImage from '@/public/images/authors/Roy.jpg'
 import { Button } from '@/components/ui/button'
 import { Download } from 'lucide-react'
+import { engagementEvents } from '@/lib/analytics'
 
 export default function Intro() {
   return (
@@ -44,6 +47,7 @@ export default function Intro() {
               target="_blank" 
               rel="noopener noreferrer"
               download
+              onClick={() => engagementEvents.downloadResume()}
             >
               <Download className="h-4 w-4" />
               My Resume

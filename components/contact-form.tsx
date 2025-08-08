@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { sendEmail } from '@/lib/actions'
+import { engagementEvents } from '@/lib/analytics'
 
 type Inputs = z.infer<typeof ContactFormSchema>
 
@@ -36,6 +37,9 @@ export default function ContactForm() {
       return
     } 
 
+    // Track successful contact form submission
+    engagementEvents.submitContactForm(data)
+    
     toast.success('Message sent successfully!')
     reset()
   }

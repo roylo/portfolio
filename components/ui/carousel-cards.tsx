@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useAnalytics, chatbotEvents } from '@/lib/analytics';
 
 export interface CarouselCardData {
   id: string;
@@ -29,19 +30,28 @@ interface CarouselCardsProps {
 
 export function CarouselCards({ title, cards, className }: CarouselCardsProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { sessionId } = useAnalytics();
   
   if (!cards || cards.length === 0) return null;
 
   const nextCard = () => {
     setCurrentIndex((prev) => (prev + 1) % cards.length);
+    chatbotEvents.interactWithCarousel(sessionId, 'next', currentIndex, cards.length);
   };
 
   const prevCard = () => {
     setCurrentIndex((prev) => (prev - 1 + cards.length) % cards.length);
+    chatbotEvents.interactWithCarousel(sessionId, 'prev', currentIndex, cards.length);
   };
 
   const goToCard = (index: number) => {
     setCurrentIndex(index);
+    chatbotEvents.interactWithCarousel(sessionId, 'dot_click', index, cards.length, cards[index].title);
+  };
+
+  const handleCardClick = (card: CarouselCardData, index: number) => {
+    chatbotEvents.clickStory(sessionId, card.id, card.title, 'carousel', index);
+    chatbotEvents.interactWithCarousel(sessionId, 'card_click', index, cards.length, card.title);
   };
 
   return (
@@ -57,7 +67,10 @@ export function CarouselCards({ title, cards, className }: CarouselCardsProps) {
       {/* Carousel Container */}
       <div className="relative">
         {/* Main Card */}
-        <Card className="mb-3 border border-border/50 shadow-sm hover:shadow-md transition-shadow">
+        <Card 
+          className="mb-3 border border-border/50 shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+          onClick={() => handleCardClick(cards[currentIndex], currentIndex)}
+        >
           <CardHeader className="pb-2">
             <div className="flex items-start justify-between gap-2">
               <CardTitle className="text-sm font-medium leading-tight line-clamp-2">

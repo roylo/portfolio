@@ -8,6 +8,7 @@ import Providers from '@/components/providers'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { ChatbotWrapper } from '@/components/chatbot'
+import { GoogleAnalytics, CookieConsent, AnalyticsProvider } from '@/lib/analytics'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 const playfair = Playfair_Display({
@@ -27,6 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' suppressHydrationWarning>
+      <head>
+        <GoogleAnalytics />
+      </head>
       <body
         className={cn(
           'flex min-h-screen flex-col font-sans antialiased',
@@ -35,12 +39,15 @@ export default function RootLayout({
         )}
         suppressHydrationWarning
       >
-        <Providers>
-          <Header />
-          <main className='grow'>{children}</main>
-          <Footer />
-          <ChatbotWrapper />
-        </Providers>
+        <AnalyticsProvider>
+          <Providers>
+            <Header />
+            <main className='grow'>{children}</main>
+            <Footer />
+            <ChatbotWrapper />
+            <CookieConsent />
+          </Providers>
+        </AnalyticsProvider>
       </body>
     </html>
   )

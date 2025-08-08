@@ -9,6 +9,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Send, MessageCircle, X, Loader2, Maximize, Minimize } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { CarouselCards, CarouselCardData } from '@/components/ui/carousel-cards';
+import { useAnalytics } from '@/lib/analytics';
+import { categorizeQuestion } from '@/lib/analytics/chatbot-events';
 
 export interface Message {
   id: string;
@@ -41,10 +43,15 @@ export function Chatbot({ className }: ChatbotProps) {
   const [isInitialized, setIsInitialized] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const { trackChatbotSession } = useAnalytics();
+  const requestStartTime = useRef<number>(0);
 
   // Initialize with welcome message on first open
   useEffect(() => {
     if (isOpen && messages.length === 0) {
+      // Start analytics session when chatbot opens
+      trackChatbotSession.start();
+      
       // Use setTimeout to ensure this happens after hydration
       setTimeout(() => {
         const welcomeMessage: Message = {
@@ -58,7 +65,14 @@ export function Chatbot({ className }: ChatbotProps) {
         setIsInitialized(true);
       }, 100);
     }
-  }, [isOpen, messages.length]);
+  }, [isOpen, messages.length, trackChatbotSession]);
+
+  // End analytics session when chatbot closes
+  useEffect(() => {
+    if (!isOpen && isInitialized) {
+      trackChatbotSession.end();
+    }
+  }, [isOpen, isInitialized, trackChatbotSession]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -112,6 +126,11 @@ export function Chatbot({ className }: ChatbotProps) {
     const currentInput = input;
     setInput('');
     setIsLoading(true);
+    
+    // Track message sending with analytics
+    const questionCategory = categorizeQuestion(currentInput);
+    trackChatbotSession.sendMessage(currentInput, questionCategory);
+    requestStartTime.current = Date.now();
 
     // Add thinking indicator immediately
     const thinkingMessage: Message = {
@@ -191,6 +210,14 @@ export function Chatbot({ className }: ChatbotProps) {
                     )
                   );
                   
+                  // Track response analytics
+                  const responseTime = Date.now() - requestStartTime.current;
+                  trackChatbotSession.receiveResponse(
+                    finalMessage.type || 'text',
+                    responseTime,
+                    finalMessage.metadata?.relevanceScore
+                  );
+                  
                 } else if (data.type === 'complete') {
                   // Stream is fully complete
                   console.log('Streaming complete');
@@ -226,6 +253,14 @@ export function Chatbot({ className }: ChatbotProps) {
         if (fallbackResponse.ok) {
           const botResponse: Message = await fallbackResponse.json();
           setMessages(prev => [...prev, botResponse]);
+          
+          // Track fallback response analytics
+          const responseTime = Date.now() - requestStartTime.current;
+          trackChatbotSession.receiveResponse(
+            botResponse.type || 'text',
+            responseTime,
+            botResponse.metadata?.relevanceScore
+          );
         } else {
           throw error;
         }
